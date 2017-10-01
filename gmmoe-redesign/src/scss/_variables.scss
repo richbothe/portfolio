@@ -1,0 +1,44 @@
+//  GM Mark of Excellence Settings
+//  ------------------------------
+
+//  Table of Contents
+//  1.	Global
+//  2.	Typography
+
+
+
+// Global
+// -------
+$container-width: 1170px !important;
+$primary-color: #363839;
+$secondary-color: #eeb723;
+$black: #000000;
+$white: #ffffff;
+$blue: #134a9c;
+$green: #008000;
+$red: #ff0000;
+$disabled: #b7b7b7;
+
+
+
+// Typography
+// ----------
+$body-background-color: $primary-color;
+$body-font-family: 'avenirNext_regular';
+$global-font-color: $primary-color;
+$header-font-family: 'avenirNext_heavy';
+$pax-header-font-family: avenirNext_bold;
+$label-font-family: avenirNext_bold;
+
+//Links
+//-----
+$anchor-font-family: avenirNext_regular;
+$anchor-font-color: #134a9c;
+
+// Buttons 
+$primary-btn-color: #134a9c;
+
+//Forms
+//-----
+$input-gray: #dedede;
+$select-text: #a29f9f;

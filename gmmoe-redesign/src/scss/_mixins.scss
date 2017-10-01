@@ -1,0 +1,53 @@
+/*
+	Horizontal/Vertical centering.
+	Source: https://css-tricks.com/snippets/sass/centering-mixin/
+*/
+@mixin centerer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*
+	If want to center horizontal, veritcal or both.
+*/
+@mixin centerer($horizontal: true, $vertical: true) {
+	position: absolute;	
+	@if ($horizontal and $vertical) {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else if ($horizontal) {
+		left: 50%;
+		transform: translate(-50%, 0);
+	} @else if ($vertical) {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
+/*  Sample usage
+
+.parent {
+	position: relative;
+	width: 50%;
+	height: 200px;
+	margin: 20px auto;
+}
+
+.child {
+	padding: 20px;
+
+	&.both {
+		@include center;
+	}
+
+	&.horizontal {
+		@include center(true, false);
+	}
+
+	&.vertical {
+		@include center(false, true);
+	}
+}
+*/

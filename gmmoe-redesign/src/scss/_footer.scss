@@ -1,0 +1,32 @@
+.footer {
+	background-color: $primary-color;
+	color: $white;
+	font-size: 11px;
+	padding: 40px;
+
+	.col {
+		padding-right: 0 !important;
+
+		&:nth-child(5) {
+			padding-left: 50px !important;
+		}
+	}
+
+	h2 {
+		font-family: 'avenirNext_bold';
+		color: $white;
+		margin-top: 0;
+	}
+
+	a, a:active, a:hover {
+		color: $white;
+		font-family: 'avenirNext_regular';
+		font-size: 11px; 
+	}
+
+	strong {
+		display: block;
+		font-family: 'avenirNext_bold';
+	}
+
+}

@@ -1,0 +1,160 @@
+// For enrollment specific styles
+.enrollment {
+	
+	.column-block {
+		position: relative;
+		padding: 0 35px;
+		height: 250px;
+
+		button {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+
+	.vr {
+		border-right: 1px solid $primary-color;
+	}
+
+	.column-block:last-child .vr {
+		border-right: none;
+	}
+
+	h3 {
+		border-bottom: 1px solid $primary-color;
+		padding-bottom: 10px;
+	}
+
+	.button-container {
+		width: 100%;
+		margin-top: 45px;
+		display: block;
+	}
+
+
+	//forms
+	.bottom-rule {
+		border-bottom: 1px solid $primary-color;
+		margin-bottom: 20px;
+	}
+
+	//tables
+	.table {
+		h4 {
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+	}
+	.pax {
+
+		th {
+			font-family: $pax-header-font-family;
+		}
+
+		td {
+			font-size: 14px;
+		}
+
+		tr > th {
+			&:last-of-type {
+				width: 0px;
+			}
+		}
+
+		.dk-select {
+			max-width: 130px;
+		}
+
+		.dk-selected::before {
+		    left: 68.5%;
+		}
+	}
+	
+	.subhead th {
+		font-family: $pax-header-font-family;
+	}
+
+	.status {
+
+		th,td {
+			text-align: left;
+		}
+
+		h3 {
+			border-bottom: none;
+		}
+	}
+
+	.passcode {
+		position: relative;
+		margin-bottom: 15px;
+
+		a { display: block; }
+	}
+
+	.download-links {
+		width: 100%;
+		
+		img {
+			display: inline-block;
+			float:right;
+			margin: 0 0 0 10px;
+		}
+	}
+
+	.contact-info {
+		margin-bottom: 50px;
+	}
+
+	.change-passcode {
+		margin-top: 40px;
+
+		label {
+			margin-right: 10px;
+			margin-bottom: 0;
+			text-align: right;
+		}
+
+		input { margin-bottom: 0; }
+	}
+}
+
+form.enroll-confirm {
+	padding-top: 20px;
+
+	label {
+		min-width: 220px;
+		float: left;
+		text-align: right;
+		margin-right: 10px;
+		line-height: 35px;
+	}
+
+	.form-group:last-child input { margin-bottom: 10px; }
+
+	a {
+		display: block;
+		margin-right: 5px;
+		margin-bottom: 40px;
+	}
+}
+
+form.pax-register {
+
+	label,
+	input[type="text"],
+	input[type="email"],
+	.dk-select { margin-bottom: 0; }
+
+	label {
+		width: 250px;
+		text-align: right;
+		margin-right: 10px;
+	}
+}
+
+
+// Overrides
+.row table.table {
+	margin-bottom: 0;
+}

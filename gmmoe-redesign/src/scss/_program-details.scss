@@ -1,0 +1,79 @@
+.program-details {
+
+	.wrapper {
+		/*min-height: 461px;*/
+		padding-top: 20px;
+	}
+
+	/*.small { height: 220px!important; }*/
+
+	h2 {  
+		float: left;
+		margin-top: 0;
+
+		span {
+			font-family: "avenirNext_regular";
+			font-size: 25px;
+		}
+	}
+
+	h4 {
+		text-transform: none;
+	}
+
+	.period-label {
+		font-family: "avenirNext_medium";
+	}
+
+	.period-length {
+		font-size: 14px;
+	}
+
+	p a {
+		font-size: 14px;
+	}
+
+	.link { padding-right: 0; }
+
+	// Section wrapper (white transparent background) - smaller version
+	.small {
+		float: left;
+		height: 220px;
+		width: 202px !important;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		cursor: pointer;
+
+		&:nth-child(even) {
+			margin-right: 0;
+		}
+
+		h1 { font-size: 20px; }
+	}
+
+	// Classes for switching program detail display
+	.displayActive {
+		display: block;
+	}
+
+	.linkActive {
+		/*border: 1px solid $blue;*/
+		opacity: .5;
+		filter: alpha(opacity=50);
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.small {
+		&:hover {
+			border: 1px solid $blue;
+		}
+	}
+
+	.small.linkActive:hover {
+		border: none;
+		cursor: default;
+	}
+}

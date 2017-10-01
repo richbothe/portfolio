@@ -1,0 +1,127 @@
+// Report Lookup
+.report-lookup {}
+
+// Dealter Participant List
+.dealer-participant-list {
+
+	.table {
+		table-layout: initial;
+	}
+
+	.table thead > tr > th {
+		font-size: 12px;
+		vertical-align: bottom;
+		word-break: break-word;
+		-webkit-hyphens: none;
+		-moz-hyphens: none;
+		hyphens: none;
+		border-collapse: collapse !important;	
+
+		&:first-of-type {
+			width: 140px;
+		}
+	}
+
+	.table tbody > tr > td {	
+		padding: 5px;
+	}
+
+	.table tbody > tr > td,
+	.table tbody > tr > td a {
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	.table tbody > tr > td:nth-child(1) {
+		word-break: break-word;
+		-webkit-hyphens: none;
+		-moz-hyphens: none;
+		hyphens: none;
+		border-collapse: collapse !important;
+	}
+}
+
+// Participant Dashboard
+.participant-dashboard {
+	h1 {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+
+	sup {
+		top: -0.25em;
+	}
+
+	.metric-label h1 {
+		font-size: 20px;
+		margin-left: 20px;
+
+		&.center-element {
+			width: 222px;
+		}
+	}
+
+	h2 { float: left; }
+
+	h4.program-label {
+		margin-bottom: 5px;
+	}
+
+	.form-control {
+		margin-bottom: 20px;
+	}
+
+	.dk-selected:before {
+		-moz-left: 86%;
+	}
+	
+	//gauge styles
+	.svgContainer {
+		margin: 0 auto;
+		max-width: 130px;
+		font-size: 1em;
+		display: block;
+	}
+
+	#gaugeSVG {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+// Reports Detail View
+.reports {
+
+	.page-header h1 { margin-bottom: 0; }
+
+	h2 {
+		font-family: $body-font-family;
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	.circle-small {
+		margin-bottom: 20px;
+	}
+}
+
+.report-metrics {
+	min-height: 249px;
+}
+
+// dkSelect overrides
+.date-selector {
+	float: right;
+	width: 150px;
+	height: 25px;
+	line-height: 24px;
+
+	.dk-selected:before {
+		left: 69.6%;
+		letter-spacing: 0.2em;
+	}
+
+	.dk-selected:after {
+		width: 25px;
+	}
+}

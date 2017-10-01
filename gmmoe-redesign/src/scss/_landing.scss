@@ -1,0 +1,107 @@
+//  Landing page styles
+.landing-page {
+	
+	h1 { margin-bottom: 10px; }
+
+	h2 {
+		font-family: $body-font-family;
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	.content { padding-top: 60px; }
+	
+	// BS Carousel
+	.carousel { margin-bottom: 20px; }
+
+	.carousel-inner { height: 350px; }
+
+	.carousel-control { display: none; }
+
+	.carousel-control.left,
+	.carousel-control.right {
+		background-image: none;
+	}
+
+	.carousel-indicators {
+		position: relative;
+		bottom: 0;
+	}
+
+	.carousel-indicators li {
+		border: 1px solid $blue;
+	}
+
+	.carousel-indicators .active {
+		background-color: $blue;
+	}
+
+	// Section wrapper (white transparent background) - smaller version
+	.small {
+		border-right: 10px solid #cdcdcd;
+		border-left: 10px solid #cdcdcd;
+		height: 220px;
+
+		&:last-child { margin-right: 0; }
+
+		h1 { font-size: 20px; }
+	}
+
+	// Slider override styles
+	.slider-container {
+		width: 495px;
+		margin-left: 20px;
+	}
+
+	// Arrows
+	.fa-chevron-circle-left,
+	.fa-chevron-circle-right {
+	    position: absolute;
+	    display: block;
+	    height: 20px;
+	    width: 20px;
+	    line-height: 0px;
+	    font-size: 0px;
+	    cursor: pointer;
+	    background: transparent;
+	    color: transparent;
+	    top: 50%;
+	    -webkit-transform: translate(0, -50%);
+	    -ms-transform: translate(0, -50%);
+	    transform: translate(0, -50%);
+	    padding: 0;
+	    border: none;
+	    outline: none;
+	    &:hover, &:focus {
+	        outline: none;
+	        background: transparent;
+	        color: transparent;
+	        &:before {
+	            opacity: 1;
+	        }
+	    }
+	    &.slick-disabled:before {
+	        opacity: 0.25;
+	    }
+	    &:before {
+	        font-size: 20px;
+	        line-height: 1;
+	        color: $blue;
+	        opacity: 0.75;
+	        -webkit-font-smoothing: antialiased;
+	        -moz-osx-font-smoothing: grayscale;
+	    }
+	}
+
+	.fa-chevron-circle-left {
+	    left: -25px;
+	}
+
+	.fa-chevron-circle-right {
+	    right: -25px;
+	}
+
+	.stretch {
+		min-height: 708px;
+	}
+}

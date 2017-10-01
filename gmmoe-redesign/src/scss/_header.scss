@@ -1,0 +1,169 @@
+/*========================================
+	Branded Tabbed Header - Full Site
+========================================*/
+body.viewtabs-CHEVY {
+	background-position: 50% 23px;
+}
+body.viewtabs-CDP {
+	background-position: 0 65px;
+}
+body.viewtabs-GMFCO {
+	height: auto !important;
+	height: 965px;
+	min-height: 965px;
+}
+
+.viewtabs-CHEVY #page_wrapper #header {
+	height: 61px;
+}
+
+// Tabs
+#viewtabs {
+	margin: 0 0 10px 0;
+	padding: 0;
+	height: 60px;
+	text-align: center;
+	background: url(../img/viewtabs.png) repeat-x;
+}
+
+#viewtabs .container {
+	padding-right: 55px;
+	padding-left: 55px;
+}
+.viewtabs-CDP #viewtabs,
+.viewtabs-GMCCA #viewtabs {
+	background-position: 0 -65px;
+}
+.viewtabs-GMFCO #viewtabs,
+.viewtabs-caelite #viewtabs {
+	background-position: 0 -130px;
+}
+.viewtabs-caelite #viewtabs {
+	height: 60px;
+	overflow: hidden;
+	margin: 0;
+}
+
+#viewtabs ul {
+	margin: 0 auto;
+	padding: 19px 0 0 0;
+	width: 990px;
+	height: 46px;
+	text-align: left;
+	list-style: none;
+}
+
+#viewtabs li {
+	display: inline;
+	float: left;
+	margin: 0 4px 0 0;
+	width: 120px;
+	height: 46px;
+	text-align: center;
+	background: url(../img/viewtabs-tabs.png) no-repeat;
+}
+.viewtabs-CHEVY #viewtabs li.CHEVY,
+.viewtabs-BG #viewtabs li.BG { background-position: -120px 0; }
+.viewtabs-CDP #viewtabs li.CDP { background-position: -240px 0; }
+.viewtabs-GMFCO #viewtabs li.GMFCO { background-position: -360px 0; }
+.viewtabs-GMCCA #viewtabs li.GMCCA { background-position: -480px 0; }
+.viewtabs-caelite #viewtabs li.GMCANADA { background-position: -600px 0; }
+
+#viewtabs li a {
+	display: block;
+	padding: 0 0 5px 0;
+	width: 120px;
+	height: 41px;
+	line-height: 41px;
+	text-align: left;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url(../img/viewtabs-tabs.png) no-repeat;
+}
+#viewtabs li.CHEVY a { background-position: 0 -46px; }
+#viewtabs li.BG a { background-position: -120px -46px; }
+#viewtabs li.CDP a { background-position: -240px -46px; }
+#viewtabs li.GMFCO a { background-position: -360px -46px; }
+#viewtabs li.GMCCA a { background-position: -480px -46px; }
+#viewtabs li.GMCANADA a { background-position: -600px -46px; }
+
+.viewtabs-CHEVY #viewtabs li.CHEVY a { background-position: 0 -92px; }
+.viewtabs-BG #viewtabs li.BG a { background-position: -120px -92px; }
+.viewtabs-CDP #viewtabs li.CDP a { background-position: -240px -92px; }
+.viewtabs-GMFCO #viewtabs li.GMFCO a { background-position: -360px -92px; }
+.viewtabs-GMCCA #viewtabs li.GMCCA a { background-position: -480px -92px; }
+.viewtabs-caelite #viewtabs li.GMCANADA a { background-position: -600px -92px; }
+
+// Userinfo
+div#userinfo {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: inline !important;
+	float: right !important;
+	padding: 12px 0 0 0 !important;
+	height: 48px !important;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+.viewtabs-on div#userinfo{
+	margin-top: 0 !important;
+	margin: /*-65px*/ -40px 0 0 0 !important;
+}
+.viewtabs-CHEVY #userinfo {
+	margin-top: -80px !important;
+	margin-right: -5px !important;
+}
+.viewtabs-BG div#userinfo,
+.viewtabs-GMFCO div#userinfo {
+	margin-top: -145px !important;
+}
+
+#userinfo p.name,
+#userinfo p.dealerinfo {
+	display: inline;
+	/*float: left;*/
+	margin: 0 0 0 0 !important;
+	padding: 0 !important;
+	font-size: 12px !important;
+	line-height: 18px !important;
+	color: #333 !important;
+}
+.viewtabs-BG p.name br {
+	display: none;
+}
+
+#userinfo p.dealership,
+#userinfo p.userinfo {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+#userinfo p.dealership {
+	display: none;
+	padding-left: 8px !important;
+}
+
+#userinfo p.utilitylinks,
+#userinfo p.usermenu {
+	margin: 0 !important;
+	padding: 0 !important;
+	color: #999 !important;
+}
+p.utilitylinks {
+	clear: both;
+	display: block !important;
+	font-size: 10px;
+	margin: 4px 0 0 0 !important;
+	padding: 0 4px !important;
+}
+
+#userinfo p.utilitylinks a,
+#userinfo p.usermenu a {
+	color: #676767 !important;
+	font-size: 10px;
+	margin: 0;
+}
+.viewtabs-CHEVY #userinfo p.usermenu a {
+	margin: 0 4px;
+}

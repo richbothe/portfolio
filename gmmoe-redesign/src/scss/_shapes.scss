@@ -1,0 +1,25 @@
+.circle-xsmall,
+ {
+	border-radius: 50% !important;
+	width: 10px !important;
+	height: 10px !important;
+	margin: 0 auto !important;
+}
+
+.circle-small {
+	border-radius: 50%;
+	width: 65px;
+	height: 65px;
+	margin: 0 auto;
+}
+
+.circle-large {
+	border-radius: 50%;
+	width: 130px;
+	height: 130px;
+	margin: 0 auto;
+}
+
+.bg-green { background: $green; }
+.bg-red { background: $red; }
+.bg-disabled { background: $disabled; }
