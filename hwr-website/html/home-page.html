@@ -1,0 +1,1012 @@
+<!DOCTYPE HTML>
+<html>
+<!--this value should change along with the language selection for the site-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!-- tiles:useAttribute name="contentrightind" classname="java.lang.String" /-->
+<!--  Image Path Setting -->
+
+<head>
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/> -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/> -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/> -->
+    <meta charset="utf-8" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+    <title>
+    	Hardware Rewards
+    </title> 
+    <!-- <link rel="stylesheet" href="../css/en/hwr.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../css/en/fsr_ok.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../css/en/display.css" type="text/css" media="screen" />    
+    <link rel="stylesheet" href="../css/en/print.css" type="text/css" media="print" /> -->
+    <link rel="stylesheet" href="../css/en/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/hwr.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/fsr_ok.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/display.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/hwr_phase2.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/print.css" type="text/css" media="print">
+    <!--[if IE 7]><link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome-ie7.css" type="text/css" media="screen"><![endif]-->
+
+    <script type="text/javascript">
+    	/* URLs to handle ajax calls */
+    	var navAjaxHandler = '../dummyNavAjax.jsp';
+    	var productsAndServicesAjaxHandler = '../jsp/productsservices/dummyProductsAndServicesAjaxHandler.jsp';
+    	var productsTableAjaxHandler = '../renderProductsDataTable.jsp';
+    	var servicesAjaxHandler = '../renderServicesBrowser.jsp';
+    	var sponsorsAjaxHandler = '../renderSponsorsBrowser.jsp';
+    	var advancedSearchAjaxHandler = '../renderAdvancedSearch.jsp';
+    	var advancedSearchResultsAjaxHandler = '../renderAdvancedSearchResults.jsp';
+    	var productDetailsAjaxHandler = '../renderProductDetails.jsp';
+    	var servicesDetailsAjaxHandler = '../renderServicesDetail.jsp';
+    	var sponsorsDetailsAjaxHandler = '../renderSponsorsDetail.jsp';    	    	
+    	var fsrModalCloseText = 'CLOSE';    	
+    	function openfsrtv()
+		{ 
+			document.getElementById('ssoform').target = "_blank";
+			//document.FormA.submit();
+			document.getElementById('ssoform').submit();
+		}					
+			
+		<!-- Google Analytics tracking pageName Per paxType -->			
+		function setGATrackingPerPageByPaxtype()
+		{
+			 //Default Value
+			 var paxType = 'Anonymous';			 
+			 
+			 //PaxType for Logged In User
+				 	 paxType = 'OP-PAX';
+			 
+			 //alert('home'+'/'+paxType);
+			 var customValue = 'home' + '|' + paxType;
+			 ga.push('_setCustomVar',
+				      1,
+				      'Pax Type',
+				      customValue);			
+		} 			
+	
+	   //added to head	
+		function onImgErrorSmall(source)
+		{
+
+		source.src = "../images/en/no-image.jpg";
+		// disable onerror to prevent endless loop
+
+		return true;	 
+		}			
+    </script>
+
+	<!-- javascript files -->
+	<!-- <script src="../scripts/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.tools.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.spinner.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.treeview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/chat.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/fsr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/hwr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.cycle.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.form.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="../scripts/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery-migrate-1.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/bootstrap-transition.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.tools.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.spinner.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.treeview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/chat.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/fsr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/hwr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.cycle.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery-ui-1.10.4.custom.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery-rotate.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<!--  Shortcut Icon -->
+    <link rel="shortcut icon" href="fsr.ico" type="image/png" />
+</head>
+<body class="homepage" onload="setGATrackingPerPageByPaxtype();">
+<!-- <body class="homepage" onload="setGATrackingPerPageByPaxtype();"> -->
+<!-- <body class="homepage"> -->
+<div class="mainOuter">
+	<div class="mainInner">
+		<!--  HEADER -->
+		<!--  GLOBAL NAVIGATION -->
+		<!--  Menu -->
+
+		<div class="header">
+        	<div class="logo" onclick="window.location.replace('/hardwarerewards/home.do')"></div>
+			<div class="navigation">
+				<ul>
+					<li>	<a href="mypromotions.do" id="navViewOffersLink" >PROMOTIONS <br />&amp; SPECIAL OFFERS</a></li>
+					<li>	<a href="participatingproducts.do" id="navBrowseProductsLink" >ELIGIBLE <br />PRODUCTS</a></li>
+					<li>	<a href="rewardscatalog.do" id="navRedeemRewardsLink" >SHOP<br />REWARDS</a></li>
+					<li>	<a href="loggedinlearnmore.do" id="navLearnMoreLink" >LEARN<br />MORE</a></li>
+				</ul>
+			</div>	
+			<div class="userInfo">
+				<h1>Welcome, <em>Ron </em></h1>        	
+				<h2><span>28001 </span> POINTS</h2>
+	        	<div class="details">
+	           	   <h1>Welcome, <em>Ron </em></h1>
+	           	   <a href="/hardwarerewards/myprofile.do" id="accountLink">My Account</a>
+	           	   <a href="javaScript:submitform();" id="chatLink">Chat is: online</a> 
+	           	   <a href="/hardwarerewards/logon.do?cmd=logout" id="logoutLink">Log Out</a> 
+	           	</div>
+	      	</div>			
+		</div>
+
+		<div class="mainContainer">
+			<!-- AJAX loads data here -->
+			<!--  Main Content -->
+			<!--  DIV - homeMain -->    
+
+			<div class="homeMain">
+				<!-- Div homeLeftCol -->
+				<div class="homeLeftCol">
+		
+					<!-- STORY -->
+					<div>
+						<div class="storyBanner">
+							<!-- Generic template -->
+							<!-- goalComplete, elite, community, offer   -->
+							<!-- background image -->
+							<div class="story default" style="background: url(../images/en/background_default2.jpg); no-repeat;"> 
+					
+				<!-- div class="story default" style="background:#404040 url(images/en/story-new-prods.jpg) top right no-repeat;"--> 
+					
+					<div class="pad">
+						<!-- Example of reduced width element (to keep text from overlaping bg image on right side) -->
+						<div style="width:460px">					
+				
+								
+							<!--  header -->
+							
+								<h1><span></span></h1>
+								 
+						
+							<!--  Title -->
+							
+								<h3><span></span></h3> 
+							
+							
+							<div class="mint">
+	
+								<!--  message -->
+								
+									<span></span>
+								
+								
+								<!--  Images  sub images -->
+								
+								
+								
+								
+							
+								
+								
+								
+								
+								<!-- Link -->
+								
+								
+																
+								
+								
+																
+
+							</div>
+
+						</div>	
+
+					</div>				
+
+				</div>		
+	
+	
+	
+				<!-- Generic template -->
+				<!-- goalComplete, elite, community, offer   -->
+				
+				<!-- background image -->
+				
+				
+				
+					<div class="story default" style="background: url(../images/en/background_3N1.png); no-repeat;"> 
+					
+				<!-- div class="story default" style="background:#404040 url(images/en/story-new-prods.jpg) top right no-repeat;"--> 
+					
+					<div class="pad">
+						<!-- Example of reduced width element (to keep text from overlaping bg image on right side) -->
+						<div style="width:460px">					
+				
+								
+							<!--  header -->
+							
+								<h1><font color="black">3-IN-ONE Multi-Purpose Oil</font><br /><br /></h1>
+								 
+						
+							<!--  Title -->
+							
+								<h3><font color="black">When we say it is multi-purpose, we mean it!</font><br /><br /> </h3> 
+							
+							
+							<div class="mint">
+	
+								<!--  message -->
+								
+									Holding the same trusted 3-IN-ONE&reg; formula, the new ergonomically shaped multi-purpose drip oil bottle is easier to use, its on and off twist tip will help avoid spilling, and its clear product fill indicator will tell you when you&#39;re running low &mdash; all to help you lubricate, clean and protect your equipment better.<br /><br />
+								
+								
+								<!--  Images  sub images -->
+								
+								
+								
+								
+							
+								
+								
+								
+								
+								<!-- Link -->
+									
+									<br/>
+										
+									
+									<a class="arrowLink yellow"	href='http://www.3inone.com/ '
+										target='_blank' 
+										 
+											onclick="javascript:pageTracker._trackPageview('../storyboard/3-IN-1 Oil Banner Ad/EN');" 
+										 />									
+								
+								
+									
+									http://www.3inone.com/ <br />
+																
+								
+									
+									</a>
+								
+																
+
+							</div>
+
+						</div>	
+
+					</div>				
+
+				</div>		
+	
+	
+	
+				<!-- Generic template -->
+				<!-- goalComplete, elite, community, offer   -->
+				
+				<!-- background image -->
+				
+				
+				
+					<div class="story default" style="background: url(../images/en/background_default1.jpg); no-repeat;"> 
+					
+				<!-- div class="story default" style="background:#404040 url(images/en/story-new-prods.jpg) top right no-repeat;"--> 
+					
+					<div class="pad">
+						<!-- Example of reduced width element (to keep text from overlaping bg image on right side) -->
+						<div style="width:460px">					
+				
+								
+							<!--  header -->
+							
+								<h1><div align="center">Welcome to Hardware Rewards!</div> </h1>
+								 
+						
+							<!--  Title -->
+							
+								<h3><div align="center">We are so glad that you joined us.</div> </h3> 
+							
+							
+							<div class="mint">
+	
+								<!--  message -->
+								
+									<span></span> 
+								
+								
+								<!--  Images  sub images -->
+								
+								
+								
+								
+							
+								
+								
+								
+								
+								<!-- Link -->
+								
+								
+																
+								
+								
+																
+
+							</div>
+
+						</div>	
+
+					</div>				
+
+				</div>		
+	
+	
+	
+				<!-- Generic template -->
+				<!-- goalComplete, elite, community, offer   -->
+				
+				<!-- background image -->
+				
+				
+				
+					<div class="story default" style="background: url(../images/en/background_default3.jpg); no-repeat;"> 
+					
+				<!-- div class="story default" style="background:#404040 url(images/en/story-new-prods.jpg) top right no-repeat;"--> 
+					
+					<div class="pad">
+						<!-- Example of reduced width element (to keep text from overlaping bg image on right side) -->
+						<div style="width:460px">					
+				
+								
+							<!--  header -->
+								 
+						
+							<!--  Title -->
+							
+							
+							<div class="mint">
+	
+								<!--  message -->
+								
+								
+								<!--  Images  sub images -->
+								
+								
+								
+								
+							
+								
+								
+								
+								
+								<!-- Link -->
+								
+								
+																
+								
+								
+																
+
+							</div>
+
+						</div>	
+
+					</div>				
+
+				</div>		
+	
+	
+
+
+
+
+<!--  goal Set stories -->
+
+
+
+
+<!--  goal Set stories -->
+
+
+
+
+
+	
+		
+			</div>
+		</div>
+		
+		
+		<script>
+		$('DIV.storyBanner').before('<div id="storyNav">').cycle({
+				fx:'fade',
+				timeout:4000,//time between slides
+				speed:1000,
+				pause:1,//pause on hover
+				pauseOnPagerHover:1,//pause on pager hover
+				nowrap:0,
+				pager:'#storyNav'
+				//activePagerClass:'activeStory'	
+				//default is 'activeSlide'
+		});
+		//initModals(); //IE8 issue
+		</script>
+		<!-- END STORY -->
+	
+		<!-- NEWS TICKER -->
+		<div class="newsBlock">
+		<div class="newsTicker">
+			<img src="../images/en/news-ticker-NEWS.png">
+			<a class="arrow left"></a>
+			<a class="arrow right"></a>
+			<div class="newsWrapper">
+				
+				
+					 
+						
+			            	<span><a href="referandearn.do">Refer and Earn</a> 500 Bonus Points </span>
+						
+					 
+						
+					 
+						
+			            	<span><a href="delegates.do">Add a delegate</a> to help manage your Hardware Rewards account</span>
+						
+					
+					
+			</div><!-- END NEWS WRAPPER -->
+		</div><!--  END NEWS TICKER -->
+		</div><!-- END NEWS BLOCK -->
+		<script>
+		$('DIV.newsWrapper').cycle({
+				fx:'scrollVert',
+				timeout:3000,//time between slides
+				speed:1000,
+				pause:1,//pause on hover
+				pauseOnPagerHover:1,//pause on pager hover
+				nowrap:0,
+				next:'DIV.newsTicker > A.arrow.right',
+				prev:'DIV.newsTicker > A.arrow.left'
+				//fxFn: function(cur,next,opts,callback,isFwd){}
+		});
+		</script>
+		<!-- END NEWS TICKER -->
+		
+		
+		<!-- CODES -->
+              <!-- Start of bottom Section -->
+          <div class="homebottomsection">
+            <div class="homebottomsectionLeft"> 
+                  <!-- CODES TOOLS -->
+                  <div class="homeCodeTools">
+                	<h1>It&#39;s Easy to Earn Reward Points</h1>
+                	<a href="#" class="videointro"><span></span></a>
+              	 	 	<section class="toolsection"> <img src="../images/en/know_brand.png" />
+                    	  <p><h3><a href="browseproducts.do">Buy brands</a></h3><font color="black">Earn points from industry recognized brands.</font></p>
+                    	</section>
+                		<section class="toolsection"> <img src="../images/en/know_earn.png" />
+                		  <p><h3><a href="referandearn.do">Earn points</a></h3><font color="black">Upload invoices with eligible products.</font></p>
+                  		 </section>
+                		<section class="toolsection"> <img src="../images/en/know_reward.png" />
+                      		<p><h3><a href="rewardscatalog.do">Get rewards</a></h3><font color="black">Redeem points for thousands of rewards.</font></p>
+                    	</section>
+              	  </div>
+                  <!-- END CODES TOOLS -->
+				  <div class="homeTabs">
+				  <ul class="basicTabs tabs">
+                      <li>
+						<a class="first" href="#">Brands</a>
+					</li>
+					
+							
+			
+								
+										
+							
+						
+                    </ul>
+                	<div class="basicTabPanes panes">
+                      <div class="products pane">
+					<a class="prev"></a>
+					<a class="next"></a>
+						
+							
+
+								
+								
+									 																	
+										<a href='browseproducts.do?cmd=sliderSearch&bid=5988'><img onerror="javaScript:onImgErrorSmall(this)" src="../images/brand_5889qa.jpg"></a>							
+									 																	
+										<a href='browseproducts.do?cmd=sliderSearch&bid=5849'><img onerror="javaScript:onImgErrorSmall(this)" src="../images/brand_5849qa.jpg"></a>							
+									 																	
+										<a href='browseproducts.do?cmd=sliderSearch&bid=5888'><img onerror="javaScript:onImgErrorSmall(this)" src="../images/brand_5888qa.jpg"></a>							
+									 																	
+										<a href='browseproducts.do?cmd=sliderSearch&bid=5928'><img onerror="javaScript:onImgErrorSmall(this)" src="../images/brand_5928qa.jpg"></a>							
+									 																	
+										<a href='browseproducts.do?cmd=sliderSearch&bid=6008'><img onerror="javaScript:onImgErrorSmall(this)" src="../images/brand_5889qa.jpg"></a>							
+									 																	
+										<a href='browseproducts.do?cmd=sliderSearch&bid=5908'><img onerror="javaScript:onImgErrorSmall(this)" src="../images/brand_5908qa.jpg"></a>							
+									 																	
+										<a href='browseproducts.do?cmd=sliderSearch&bid=5968'><img onerror="javaScript:onImgErrorSmall(this)" src="../images/brand_5889qa.jpg"></a>							
+									
+										
+							
+							
+						
+					</div>
+				
+					<div class="services pane">
+						<a class="prev"></a>
+						<a class="next"></a>
+					
+						
+							
+			
+								
+										
+							
+						
+					</div>
+					</div>
+                	
+              	  </div>	<!-- END HOME TABS -->
+              	 <script>
+		      	  var brandcounter = 5;
+		      	  brandcounter = 5;
+		      	  //group up the elements into divs, 6 in each
+		      	  var childs = $('DIV.homeTabs DIV.products.pane').children('A[class!="next"][class!="prev"]');
+		      	  var six = Array();
+		      	  for(var i=0;i<childs.length;i++){
+		      		  six[i%brandcounter] = childs[i];//accumulate 6 elements
+		      		  if(six.length==brandcounter || i+1==childs.length){//if have 6 ele or on last ele, wrap them and reset the array
+		      			  $(six).wrapAll('<div></div>');	
+		      		  six = Array();
+		      		  }
+		      	  }
+		      	  $('DIV.homeTabs DIV.products.pane').cycle({
+		      		  fx:'scrollHorz',
+		      		  timeout:6000,//time between slides
+		      		  speed:1000,
+		      		  pause:1,//pause on hover
+		      		  pauseOnPagerHover:1,//pause on pager hover
+		      		  nowrap:0,
+		      		  next:'DIV.products.pane A.next',
+		      		  prev:'DIV.products.pane A.prev',
+					  slideExpr:'DIV'
+					  //activePagerClass:'activeStory'	
+					  //default is 'activeSlide'
+		      	  });
+		
+		      	  //group up the elements into divs, 6 in each
+		      	  childs = $('DIV.homeTabs DIV.services.pane').children('A[class!="next"][class!="prev"]');
+		      	  six = Array();
+		      	  for(var i=0;i<childs.length;i++){
+		      		  six[i%brandcounter] = childs[i];//accumulate 6 elements
+		      		  if(six.length==brandcounter || i+1==childs.length){//if have 6 ele or on last ele, wrap them and reset the array
+		      			  $(six).wrapAll('<div></div>');	
+		      		  six = Array();
+		      		  }
+		      	  }
+		      	  $('DIV.homeTabs DIV.services.pane').cycle({
+					  fx:'scrollHorz',
+					  timeout:6000,//time between slides
+					  speed:1000,
+					  pause:1,//pause on hover
+					  pauseOnPagerHover:1,//pause on pager hover
+					  nowrap:0,
+					  next:'DIV.services.pane A.next',
+					  prev:'DIV.services.pane A.prev',
+					  slideExpr:'DIV'
+					  //activePagerClass:'activeStory'	
+					  //default is 'activeSlide'
+		      	  });
+				</script> 
+       	</div> <!--  END HOME BOTTOM SECTION LEFT-->
+			
+			
+			<div class="homebottomsectionRight">
+                  <div class="homeCode">
+
+<SCRIPT LANGUAGE="JavaScript">
+var submitcounter = 0;
+function submitCodePage() 
+{
+	if($('A#continue').hasClass('disabledButton1')){return;}
+if(submitcounter < 1)
+{
+	submitcounter = 1;
+	$('#continue').addClass('disabledButton1');
+	document.getElementById('singlecontinue').innerHTML = '<a id="continue" class="inlineBlock disabledButton"></a>';	
+    document.enterRewardCodesForm.action = "singlerewardcode.do?cmd=singlecode";
+	document.enterRewardCodesForm.pageAction.value = 'SAVE';
+	document.enterRewardCodesForm.howtoenter.value = 'SINGLE';
+    document.enterRewardCodesForm.submit();
+ }    
+}
+
+function submitOnEnter() 
+{
+ if((navigator.appVersion.indexOf('MSIE') != -1) &&
+    (navigator.appVersion.indexOf('5.') != -1))
+  {
+   if(event.keyCode==13) 
+   {
+		submitCodePage();
+		
+	}
+  }
+  else if((navigator.appVersion.indexOf('Windows') != -1) &&
+          (navigator.appVersion.indexOf('5.') != -1))
+  {
+    document.onkeypress = checkChangeShooterPosition;
+  }
+}
+
+function checkChangeShooterPosition(e) {
+	var key = e ? e.which : window.event.keyCode;
+	//alert('keycode : ' + key);
+	if(key == 13)
+	{
+	  	submitCodePage();
+	}
+	
+}
+function resetCodePage(){	
+	document.getElementById("chunk1").value = "";
+	document.getElementById("chunk2").value = "";
+	document.getElementById("chunk3").value = "";
+}
+  </SCRIPT>
+  		
+  		
+  	 <!-- ****************SINGLE ENTER CODE STARTS*************** -->
+		
+			
+			
+		
+		
+		
+			
+			<h2><strong>Enter Promotion Code</strong></h2>
+	         <form name="enterRewardCodesForm" method="post" action="/hardwarerewards/enterrewardcodes.do">
+	         	<input type="hidden" name="pageAction" value="">
+				<input type="hidden" name="howtoenter" value="SINGLE">
+				<input type="hidden" name="overLayCounter" value="0">
+		        
+					
+					
+					<input type="text" name="codeInfo[0].code1" maxlength="4" size="6" value="" onkeypress="javascript:submitOnEnter()" id="chunk1" class="codeChunk  autoTab" alt="#chunk2">
+			          <input type="text" name="codeInfo[0].code2" maxlength="4" size="6" value="" onkeypress="javascript:submitOnEnter()" id="chunk2" class="codeChunk  autoTab" alt="#chunk3">
+			          <input type="text" name="codeInfo[0].code3" maxlength="4" size="6" value="" onkeypress="javascript:submitOnEnter()" id="chunk3" class="codeChunk">
+
+	       </form>
+     
+<!--    		 <a href="javascript:submitCodePage();" class="submitCode"><img src="images/en/home-SUBMIT-REWARD-CODE.png"></a> -->
+   	
+		   <div class="center" id="singlecontinue"> <a href="javascript:submitCodePage();" class="hwrButton" id="continue">SUBMIT CODE</a></div>
+				
+			
+      <!-- **********SINGLE ENTER CODE ENDS**************** -->
+       
+ <script>
+	//clear old classes
+  	$('div.navigation UL > LI.navOn > A').removeClass('navLinkOn');
+  	$('div.navigation  UL > LI.navOn').removeClass('navOn');
+  	
+  	//add for current
+  	$('div.navigation UL > LI > A#navHomeLink').parent('LI').addClass('navOn');
+  	$('div.navigation UL> LI > A#navHomeLink').addClass('navLinkOn');
+ </script>
+												
+                  </div>
+                  <!-- END CODES --> 
+                  <!-- GOAL SET -->
+                  
+                  <div> <a href="referandearn.do"><img class="noEarnNoGoal" src="../images/en/home-no-goal-set.png"/></a> </div>
+                  
+                  <!-- Goal Set --> 
+                  
+                  <!-- /div--> 
+                  
+                  <script>
+		/* SPECIAL OFFERS TOOLTIP */
+		$("DIV.goalSet IMG.thumb").tooltip(
+			{tipClass:'tooltipSpecial',offset:[28,83],effect: 'slide',
+			onShow:function(){initModals();}
+			 ,onBeforeShow:function(){
+                    this.getTip().css('display','block');
+                    var t = this.getTip().find('DIV.specialTitle');
+                    var c = this.getTip().find('DIV.specialContent');
+                    var totalHeight = t.outerHeight()+c.outerHeight();
+                    this.getTip().css('display','none');
+                    if(totalHeight>113){
+                        t.css('font-size','10px');    
+                        c.css('font-size','10px');
+                        c.css('line-height','10px');
+                    }
+                }
+            });	
+		</script> 
+                  <!-- END GOAL SET --> 
+                </div>
+            
+           
+            
+          </div>
+              <!-- End of bottom Section --> 
+            </div>
+        <!-- end left col --> 
+        
+        <script>
+			//initial validation call
+			checkCodeChunks();
+			 
+			
+			//validate on change of code chunk fields
+			$('INPUT.codeChunk').keyup(function(){
+				checkCodeChunks();
+				//if 4 chars entered, go to next chunk
+				if($(this).val().length==4){
+					var next = $(this).next('INPUT.codeChunk');
+					if(next){
+						next.focus();
+					}else{//last one, give the add code button focus
+						$('A#addCode').focus();
+					}
+				}
+			});
+			
+			//simple length validation to enable add code button
+			function checkCodeChunks(){
+				var errors = 0;
+				$('INPUT.codeChunk').each(function(){
+					if($(this).val().length!=4){
+						errors++;
+					}
+				});
+				if(errors>0){
+					$('A#addCode').addClass('disabledButton');	
+				}else{
+					$('A#addCode').removeClass('disabledButton');	
+				}
+			}
+			
+			//if addcode button is disabled or red, prevent action
+			$('A#addCode').click(function(event){
+				//if disabled prevent action
+				if($(this).hasClass('disabledButton')||$(this).hasClass('redButton')){
+					event.preventDefault();
+					return;
+				}else{//do add code load of data
+					/* ajax form submit? 
+					
+					Let me know if you need help implementing this part - Aaron
+					
+					*/
+				}
+			});
+			
+			// ENTER CODE MODE 
+			// if one or more codes successfully entered, use modal and send to confirm page
+			function enterCodeMode(){
+				$('A,BUTTON').click(function(event){
+					//error modal displayed, allow normal clicks
+	                    if($('DIV.formError').css('display')=='block'){
+	                        return;
+	                    }
+					//allow done entering codes button
+					if($(event.target).parent('A#done').length==1){
+						//allowed
+					}else if($(event.target).parent('A#submit').length==1){
+							//allowed
+						}else if($(event.target).parent('A#addCode').length==1){
+						//allowed
+					}else if($(event.target).attr('id')=='logout'){
+							//allowed
+					}else if($(event.target).parent('A#submitsweepstakes').length==1){
+							//allowed
+					}else if($(event.target).parents('DIV#MAGGI').length==1){
+							//allowed
+					}else if($(event.target).parents('DIV#MAGGICONFIRM').length==1){
+							//allowed
+					}else if($(event.target).parents('DIV#NestleInstantWin').length==1){
+							//allowed
+					}else if($(event.target).attr('id')=='scancode'){
+							//allowed
+					}else{//do modal dialogue
+						/* open modal programatically - uses hidden, prerendered div */
+						var modal = $('DIV#finishedEnteringCodes');
+						showModal(modal);
+						event.preventDefault();//kill normal action
+					}
+					
+				});
+			}
+			
+			var flag=false;
+ for(z=0;z<document.forms.length;z++){
+  var form = document.forms[z];
+  var elements = form.elements;
+  for (var i=0;i<elements.length;i++){
+    var element = elements[i];
+    if(element.type == 'text' &&
+      !element.readOnly &&
+      !element.disabled){
+      element.focus();
+	  flag=true;
+     break;
+    }
+  }
+  if(flag)break;
+ }
+				
+
+
+				
+			</script> 
+		</div> <!-- END BOTTOM SECTION -->
+		
+
+
+			<!--  Banner Ads -->
+			
+		</div>
+
+
+	</div>
+	<!-- END MAIN INNER -->
+</div>
+<!-- END MAIN OUTER -->
+
+
+            <input type ="hidden" name ="languageId" id="languageId" value='EN' />
+            <input type ="hidden" name ="chatbutton" id="chatbutton" value='replacewithdiv' />
+			           
+			        
+			          <input type ="hidden" name ="online" id="online" value='' />
+					  <input type ="hidden" name ="busy" id="busy" value='' />
+					  <input type ="hidden" name ="offline" id="offline" value='' />
+					  
+					  
+					
+					     	
+					     	  <input type ="hidden" name ="liveHelpText" id="liveHelpText" value='<span></span>' />
+         
+					 	
+
+
+		<SCRIPT language="JavaScript">
+			function submitform()
+			{
+			  document.chatform2.submit();
+			}
+		</SCRIPT>
+
+
+		<form  style="display:none" name="chatform2" action='https://wwwqa.hardwarerewards.com/im-support/' method="get" target="_blank">
+			<input type="hidden" name="im" value='hardware@biworldwide.com'>
+			
+				<input type="hidden" name="name" value='Ron.Mar'> 
+				<input type="hidden" name="emailAddress" value='r@en.com'> 
+				<input type="hidden" name="participantId" value='1249556'> 
+				<input type="hidden" name="paxType" value='OP-PAX'> 
+				<input type="hidden" name="languageId" value='EN'> 
+			
+						
+		</form>
+		<script type="text/javascript">
+				rwc_writeLink2('hardware@biworldwide.com',
+							  'wwwqa.hardwarerewards.com/im-support/',
+							  'https');
+				 initlinks();
+		</script>
+
+<!--  FOOTER -->
+
+<div class="footer"> 
+      <!--  COPYRIGHT -->
+      <div class="copyright">
+		Copyright &copy;2013-2014, Hardware Rewards&reg;. All rights reserved. 
+	  </div>
+      
+      <!--  FOOTER LINKS -->
+    	<div class="footerLinks thin"> 
+    
+			
+						
+							
+								
+									
+									
+									<a href="faq.do">
+										Help
+									</a>	
+									<!-- c:if test="${size != status.count}" -->
+
+								
+									
+									
+										<span class="footerLinkDivider">&nbsp;|</span>
+									
+									<a href="#" class="modalInput" rel="privacypolicy.do privacyPolicy" title="PRIVACY POLICY">
+										Privacy Policy
+									</a>	
+									<!-- c:if test="${size != status.count}" -->
+
+								
+									
+									
+										<span class="footerLinkDivider">&nbsp;|</span>
+									
+									<a href="#" class="modalInput" rel="termsconditions.do termsConditions" title="TERMS & CONDITIONS">
+										Terms &amp; Conditions
+									</a>	
+									<!-- c:if test="${size != status.count}" -->
+
+								
+									
+									
+										<span class="footerLinkDivider">&nbsp;|</span>
+									
+									<a href="sitemap.do">
+										Site Map
+									</a>	
+									<!-- c:if test="${size != status.count}" -->
+
+								
+									
+									
+										<span class="footerLinkDivider">&nbsp;|</span>
+									
+									<a href="contactuslanding.do">
+										Contact Us
+									</a>	
+									<!-- c:if test="${size != status.count}" -->
+
+								
+								
+    	</div>
+      
+      <!-- /div--> 
+      
+    </div>
+
+
+	<!-- FSR TV SSO --> 
+	<!-- <a href ="javascript:openfsrtv()">FSR TV</a>  -->
+	
+	    <!-- form action="http://wwwpprd.foodservicerewards.tv/fsr/bi/bisso.jsp" id="ssoform" method="post"-->
+	    <form action='http://www.foodservicerewards.tv/fsr/bi/bisso.jsp' id="ssoform" method="post">
+  	        <input type="hidden" name="user" value='BYbwJactr+87Lq5apwphRlUVA+tGA7crTl3StvkHp8Nxe4Anf69jKMsAA1M9tw46i0SHCk7r4JR9
+psLq2ZYvD2lk5j0HE9f+02EQEgrViKMJN9MpcQ3zBCQ3umB3PMDDQ1kANOa/3GnZ1WaNzXX0n6N1
+vp4l1ND0SqRhOTcC5LXqSqXL150lhQog0zbQyosxjX3lTJgIRtc/g62S6yvVDKruZsEq6Xz97ftC
+LLz4oiUWona9MK6hXlfeM/FeW6zC6xVlIlstE4m0wT3UY1sTJ9q70BZKPgG9VWMWsIWleBB2+snv
+sv5Fhw+tFm7MeJ6XzhJMKarnX+P93jKiJ4rFREHFEZdsmu5gN5V6rDBgJNThZCo5ejHxO50NlBSn
+Z7FxQoqfi56b6FcU4wZBs3edWp55TsQq9jHlpB0Uhkjxs+oifNlKYVSUYwUY8KoTz1p3p9iSaonF
+JCyUFes8OyazPYrdqFzR73nCQmmRQCd5ZMo='/> 
+	    </form>		
+	
+	<!-- FSR TV SSO --> 
+	
+
+			
+<!-- Google Analytics Code-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42213122-1', 'hardwarerewards.com');
+  ga('send', 'pageview');
+
+</script>
+<!--End Google Analytics Code-->
+			
+</body>
+</html>

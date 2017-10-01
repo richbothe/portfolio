@@ -1,0 +1,586 @@
+
+<!DOCTYPE HTML>
+<html><!--this value should change along with the language selection for the site-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!-- tiles:useAttribute name="contentrightind" classname="java.lang.String" /-->
+	<!--  Image Path Setting -->
+<head>
+    <meta charset="utf-8" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+    <title>
+    	Hardware Rewards
+    </title> 
+
+    <link rel="stylesheet" href="../css/en/hwr.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../css/en/fsr_ok.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../css/en/display.css" type="text/css" media="screen" />    
+    <link rel="stylesheet" href="../css/en/print.css" type="text/css" media="print" />
+
+
+    <script type="text/javascript">
+    	/* URLs to handle ajax calls */
+    	var navAjaxHandler = '../dummyNavAjax.jsp';
+    	var productsAndServicesAjaxHandler = '../jsp/productsservices/dummyProductsAndServicesAjaxHandler.jsp';
+    	var productsTableAjaxHandler = '../renderProductsDataTable.jsp';
+    	var servicesAjaxHandler = '../renderServicesBrowser.jsp';
+    	var sponsorsAjaxHandler = '../renderSponsorsBrowser.jsp';
+    	var advancedSearchAjaxHandler = '../renderAdvancedSearch.jsp';
+    	var advancedSearchResultsAjaxHandler = '../renderAdvancedSearchResults.jsp';
+    	var productDetailsAjaxHandler = '../renderProductDetails.jsp';
+    	var servicesDetailsAjaxHandler = '../renderServicesDetail.jsp';
+    	var sponsorsDetailsAjaxHandler = '../renderSponsorsDetail.jsp';    	
+    	
+    	var fsrModalCloseText = 'CLOSE';
+    	
+    	function openfsrtv()
+		{ 
+			document.getElementById('ssoform').target = "_blank";
+			//document.FormA.submit();
+			document.getElementById('ssoform').submit();
+		}		
+			
+			
+		<!-- Google Analytics tracking pageName Per paxType -->	
+		
+		function setGATrackingPerPageByPaxtype()
+		{
+			 //Default Value
+			 var paxType = 'Anonymous';			 
+	 	   
+	 	   
+			 
+			 //PaxType for Logged In User
+			 	
+			 	 	  			 
+				 	 paxType = 'OP-PAX';						 	 
+			  	 
+			  	 
+			 
+			 
+			 //alert('mypromotions'+'/'+paxType);
+	 	    
+			 var customValue = 'mypromotions' + '|' + paxType;
+			 ga.push('_setCustomVar',
+				      1,
+				      'Pax Type',
+				      customValue);			
+		} 			
+	
+	
+   //added to head	
+	function onImgErrorSmall(source)
+	{
+
+	source.src = "../images/en/no-image.jpg";
+	// disable onerror to prevent endless loop
+
+	return true;
+ 
+	}			
+    </script>
+
+<!-- javascript files -->
+	<script src="../scripts/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.tools.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.spinner.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.treeview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/chat.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/fsr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/hwr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.cycle.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+
+	<!--  Shortcut Icon -->
+    <link rel="shortcut icon" href="fsr.ico" type="../image/png" />
+       
+</head>
+<body class="accountpage" onload="setGATrackingPerPageByPaxtype();">
+<!-- <body class="homepage" onload="setGATrackingPerPageByPaxtype();"> -->
+<!-- <body class="homepage"> -->
+<div class="mainOuter">
+	<div class="mainInner">
+		<!--  HEADER -->
+		<!--  GLOBAL NAVIGATION -->
+		<!--  Menu -->
+<div class="header">
+        <div class="logo" onclick="window.location.replace('/hardwarerewards/home.do')"></div>
+<div class="navigation">
+						<ul>
+							<li><a href="mypromotions.do" id="navViewOffersLink">PROMOTIONS <br>&amp; SPECIAL OFFERS</a></li>
+							<li><a href="participatingproducts.do" id="navBrowseProductsLink">ELIGIBLE <br>PRODUCTS</a></li>
+							<li><a href="rewardscatalog.do" id="navRedeemRewardsLink">SHOP<br>REWARDS</a></li>
+							<li><a href="loggedinlearnmore.do" id="navLearnMoreLink">LEARN<br>MORE</a></li>
+						</ul>
+</div>	
+<div class="userInfo">
+        	<h1>Welcome, <em>Ron </em></h1>
+        	
+        	<h2><span>28001 </span> POINTS</h2>
+        	<div class="details">
+           	   <h1>Welcome, <em>Ron </em></h1>
+           	   <a href="/hardwarerewards/myprofile.do" id="accountLink">My Account</a>
+           	   <a href="javaScript:submitform();" id="chatLink">Chat is: online</a> 
+           	   <a href="/hardwarerewards/logon.do?cmd=logout" id="logoutLink">Log Out</a> 
+           	</div>
+      	</div>			
+</div>		
+		
+		
+
+		<div class="mainContainer">
+			<!-- AJAX loads data here -->
+	
+			<!--  Main Content -->
+<SCRIPT LANGUAGE="JavaScript">
+function printPage()
+{
+	//win = window.open( '/hardwarerewards/mypromotionsprint.do?mode=P&cmd=print&sortby=null', '_blank' );
+	window.print();
+}
+
+
+function changeSort()
+{
+var showoffers = 	document.myPromotionsForm.elements["showOffers"].checked;
+var showPrograms = document.myPromotionsForm.elements["showPrograms"].checked;  
+
+if( !showoffers && !showPrograms)
+{
+	table.style.display = 'none';	
+	error.style.display = 'block';	
+	error1.style.display = 'none';	
+	generalerror.style.display = 'none';
+}
+else
+{
+ document.myPromotionsForm.mode.value= 'checkbox';
+ document.myPromotionsForm.cmd.value= 'unspecified';
+ 
+ document.myPromotionsForm.submit();
+ }
+  
+}
+</SCRIPT>
+<div class="viewOffersMain">
+
+	<!-- LEFT COL -->
+	<div class="viewOffersLeftCol">
+		<div  class="bannerText" >
+			<h1>Promotions &amp; Offers</h1>
+	
+			<h3>Below you will find promotions and special offers currently offered by participating brands. Check out ways you can boost your point balance and earn rewards faster!</h3>
+			<div id="error1" >
+				<br/>This information is current as of: November 21, 2013
+			</div>
+		</div>
+			<form name="myPromotionsForm" method="post" action="/hardwarerewards/mypromotions.do">
+		  		<input type="hidden" name="mode" value="">
+		   		<input type="hidden" name="cmd" value="">
+				<div class="viewOffersWrapper">
+					<div class="viewOffersToolbar">
+						<b>Sort by:</b>
+						<select name="sortby" onchange="javaScript:changeSort();" id="sortByDropdown"><option value="" selected="selected">-select one-</option>
+<option value="1">Newest</option>
+<option value="2">Expiration Date</option>
+<option value="3">Sponsor</option></select>
+						&nbsp;
+						&nbsp;
+						<b>Display:</b>
+						&nbsp;
+						<input type="checkbox" name="showPrograms" value="true" checked="checked" onclick="javaScript:changeSort();">	<label for="">Current Promotions</label>
+						&nbsp;
+						<input type="checkbox" name="showOffers" value="true" checked="checked" onclick="javaScript:changeSort();">	<label for="showPrograms">Special Offers</label>				
+					</div>
+
+					<div id="table">
+					
+						
+<table id="myPromotionsInfo" cellpadding="0" class="browseProductsData" cellspacing="0">
+<thead>
+<tr>
+<th></th></tr></thead>
+<tbody>
+<tr class="odd">
+<td style="display: none;" class="off">
+			                 <!-- For highligting direct Promotion -->
+				            <td  class="thumb"  width="20">	<img  onerror="javaScript:onImgErrorSmall(this)"  src='../images/en/brand_5889qa.jpg' border="0" class="partnerlogo"></td>
+				            
+				            
+				            <td>  
+			<dl class="accordion">
+				<dt>
+				<div>
+					<h1> 
+				            	 
+				            	 
+				            	 <a  rel="mypromotions.do?cmd=getPromotionDetails&promoId=13835 rewardsModal" title='Offer Details'>
+									Heat Up Your Sales With Double Points On Thermostats</a>
+								
+				            	 
+				            		</h1>  
+								<h2>11/15/2013 - 06/30/2014</h2>
+				       			Looking to heat up your sales? Just crank up your thermostat sales! For the rest of 2013&#160;&#38; through June of 2014 earn double points on all thermostats.
+				</div></dt>
+				
+				<dd>
+						<div class="promotiondetails"><p>Does this display in IE?</p></div>
+					</dd>
+			</dl>
+			</td>
+			
+			
+
+<!-- 				            	<h1>  -->
+<!-- 				            		</h1>   -->
+
+
+<!-- 							</td> -->
+						</td></tr>
+<tr class="even">
+<td style="display: none;" class="off">
+			                 <!-- For highligting direct Promotion -->
+				            <td  class="thumb"  width="20">	<img  onerror="javaScript:onImgErrorSmall(this)"  src='../images/en/PromoQA_3.jpg' border="0" class="partnerlogo"></td>
+				            
+				            
+				            <td>  
+			<dl class="accordion">
+				<dt>
+				<div>
+					<h1> 
+				            	 
+				            	 
+				            	 <a  rel="mypromotions.do?cmd=getPromotionDetails&promoId=13815 rewardsModal" title='Offer Details'>
+									<p>Welcome to Hardware rewards!</p></a>
+								
+				            	 
+				            		</h1>  
+								<h2>05/25/2013 - 05/25/2014</h2>
+				       			Welcome to Harware Rewards!
+				</div></dt>
+				
+				<dd>
+						<div class="promotiondetails"></div>
+					</dd>
+			</dl>
+			</td>
+<!-- 				            	<h1>  -->
+<!-- 				            		</h1>   -->
+
+
+<!-- 							</td> -->
+						</td></tr></tbody></table><span class="pagelinks"></span><span class="pagelinks"><strong>1</strong></span>  	
+		         
+		        	 
+				
+				</div>
+				
+				 <div id="error" style =display:none;>
+				    <br/>
+					<b>	There is nothing to display. Please check your display selection(s) above.</b>
+				</div>
+			<div id="generalerror" >
+			     
+				<!--  
+					
+					 
+				 -->
+		   </div>
+		   
+		</div>
+	
+		     </form>  
+ 
+
+</div><!--end leftCol-->
+	
+	<!-- RIGHT RAIL -->
+	
+
+
+<script>
+var deatilsAppened;
+  (function($) {
+    
+  var allPanels = $('.accordion > dd').hide();
+    
+  $('.accordion > dt > div').click(function() {
+    allPanels.slideUp();
+    var url = $(this).find('a').attr('rel').split(' ');
+	//console.log(url[0]);
+	if(!deatilsAppened)
+		{
+			getajaxdata(url[0]);		
+		}
+    $(this).parent().next().toggle();
+    return false;
+  });
+
+})(jQuery);
+
+function getajaxdata(promodetailurl)
+{
+ $.ajax({
+                            url: promodetailurl,
+                            type: 'GET',
+                            dataType: 'html',
+                            success: function(data, textStatus, xhr) {
+								 $(' dd .promotiondetails').append($(data).find('p'));
+								 deatilsAppened =true;
+                            },
+                            error: function(xhr, textStatus, errorThrown) {
+                                $('#promotiondetails').html(textStatus);
+                            }
+                        });
+}
+  </script>
+  
+  
+
+
+<!--  Banner Ads -->
+
+	
+
+ <style>
+.accordion {
+   margin: 5px;   
+   dt, dd {
+      padding: 10px;
+      border: 1px solid black;
+      border-bottom: 0; 
+      &:last-of-type {
+        border-bottom: 1px solid black; 
+      }
+      a {
+        display: block;
+        color: black;
+        font-weight: bold;
+      }
+   }
+  dd {
+     border-top: 0; 
+     font-size: 12px;
+     &:last-of-type {
+       border-top: 1px solid white;
+       position: relative;
+       top: -1px;
+     }
+  }
+}
+a {
+  text-decoration: none;
+}
+
+</style>
+
+
+			
+	       
+	       
+	       
+
+	
+<script>
+  	$('UL.browseProductsTabs > LI').removeClass('navOn');
+  	$('UL.browseProductsTabs > LI > A#servicesLink').parent('LI').addClass('navOn');
+  	
+
+hideTable();
+
+function hideTable()
+{
+
+var showoffers = 	document.myPromotionsForm.elements["showOffers"].checked;
+var showPrograms = document.myPromotionsForm.elements["showPrograms"].checked;  
+
+
+if( !showoffers && !showPrograms)
+{
+table.style.display = 'none';	
+error.style.display = 'block';	
+	error1.style.display = 'none';	
+
+}else
+{
+table.style.display = 'block';
+error.style.display = 'none';	
+	error1.style.display = 'block';	
+}
+
+}
+  </script>
+  
+  <script>
+	//clear old classes
+  	$('div.navigation UL > LI.navOn > A').removeClass('navLinkOn');
+  	$('div.navigation  UL > LI.navOn').removeClass('navOn');
+  	
+  	//add for current
+  	$('div.navigation UL > LI > A#navViewOffersLink').parent('LI').addClass('navOn');
+  	$('div.navigation UL> LI > A#navViewOffersLink').addClass('navLinkOn');
+ </script>
+
+			<!--  Banner Ads -->
+			
+		</div>
+
+
+	</div>
+	<!-- END MAIN INNER -->
+</div>
+<!-- END MAIN OUTER -->
+
+
+            <input type ="hidden" name ="languageId" id="languageId" value='EN' />
+            <input type ="hidden" name ="chatbutton" id="chatbutton" value='replacewithdiv' />
+			           
+			        
+			          <input type ="hidden" name ="online" id="online" value='' />
+					  <input type ="hidden" name ="busy" id="busy" value='' />
+					  <input type ="hidden" name ="offline" id="offline" value='' />
+					  
+					  
+					
+					     	
+					     	  <input type ="hidden" name ="liveHelpText" id="liveHelpText" value='<span></span>' />
+         
+					 	
+
+
+		<SCRIPT language="JavaScript">
+			function submitform()
+			{
+			  document.chatform2.submit();
+			}
+		</SCRIPT>
+
+
+		<form  style="display:none" name="chatform2" action='https://wwwqa.hardwarerewards.com/im-support/' method="get" target="_blank">
+			<input type="hidden" name="im" value='hardware@biworldwide.com'>
+			
+				<input type="hidden" name="name" value='Ron.Mar'> 
+				<input type="hidden" name="emailAddress" value='r@en.com'> 
+				<input type="hidden" name="participantId" value='1249556'> 
+				<input type="hidden" name="paxType" value='OP-PAX'> 
+				<input type="hidden" name="languageId" value='EN'> 
+			
+						
+		</form>
+		<script type="text/javascript">
+				rwc_writeLink2('hardware@biworldwide.com',
+							  'wwwqa.hardwarerewards.com/im-support/',
+							  'https');
+				 initlinks();
+		</script>
+
+
+
+ 
+				
+         
+<!--  FOOTER -->
+<!--  FOOTER -->
+
+<div class="footer"> 
+      <!--  COPYRIGHT -->
+      <div class="copyright">
+		Copyright &copy;2013-2014, Hardware Rewards&reg;. All rights reserved. 
+	  </div>
+      
+      <!--  FOOTER LINKS -->
+    	<div class="footerLinks thin"> 
+									<a href="faq.do">
+										Help
+									</a>	
+									<!-- c:if test="${size != status.count}" -->
+
+								
+									
+									
+										<span class="footerLinkDivider">&nbsp;|</span>
+									
+									<a href="#" class="modalInput" rel="privacypolicy.do privacyPolicy" title="PRIVACY POLICY">
+										Privacy Policy
+									</a>	
+									<!-- c:if test="${size != status.count}" -->
+
+								
+									
+									
+										<span class="footerLinkDivider">&nbsp;|</span>
+									
+									<a href="#" class="modalInput" rel="termsconditions.do termsConditions" title="TERMS & CONDITIONS">
+										Terms &amp; Conditions
+									</a>	
+									<!-- c:if test="${size != status.count}" -->
+
+								
+									
+									
+										<span class="footerLinkDivider">&nbsp;|</span>
+									
+									<a href="sitemap.do">
+										Site Map
+									</a>	
+									<!-- c:if test="${size != status.count}" -->
+
+								
+									
+									
+										<span class="footerLinkDivider">&nbsp;|</span>
+									
+									<a href="contactuslanding.do">
+										Contact Us
+									</a>	
+									<!-- c:if test="${size != status.count}" -->
+
+								
+								
+    	</div>
+      
+      <!-- /div--> 
+      
+    </div>
+
+
+	<!-- FSR TV SSO --> 
+	<!-- <a href ="javascript:openfsrtv()">FSR TV</a>  -->
+	
+	    <!-- form action="http://wwwpprd.foodservicerewards.tv/fsr/bi/bisso.jsp" id="ssoform" method="post"-->
+	    <form action='http://www.foodservicerewards.tv/fsr/bi/bisso.jsp' id="ssoform" method="post">
+  	        <input type="hidden" name="user" value='BYbwJactr+87Lq5apwphRlUVA+tGA7crTl3StvkHp8Nxe4Anf69jKMsAA1M9tw46d2JGkjTZ5q48
+lPbBAzPQDGlk5j0HE9f+02EQEgrViKMJN9MpcQ3zBCQ3umB3PMDDQ1kANOa/3GnZ1WaNzXX0n6N1
+vp4l1ND0SqRhOTcC5LXqSqXL150lhQog0zbQyosxjX3lTJgIRtc/g62S6yvVDKruZsEq6Xz97ftC
+LLz4oiUWona9MK6hXlfeM/FeW6zC6xVlIlstE4m0wT3UY1sTJ9q70BZKPgG9VWMWsIWleBB2+snv
+sv5Fhw+tFm7MeJ6XzhJMKarnX+P93jKiJ4rFREHFEZdsmu5gN5V6rDBgJNThZCo5ejHxO50NlBSn
+Z7FxQoqfi56b6FcU4wZBs3edWp55TsQq9jHlpB0Uhkjxs+oifNlKYVSUYwUY8KoTz1p3p9iSaonF
+JCyUFes8OyazPYrdqFzR73nCQmmRQCd5ZMo='/> 
+	    </form>		
+	
+	<!-- FSR TV SSO --> 
+	
+
+			
+<!-- Google Analytics Code-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42213122-1', 'hardwarerewards.com');
+  ga('send', 'pageview');
+
+</script>
+<!--End Google Analytics Code-->
+
+			
+</body>
+</html>

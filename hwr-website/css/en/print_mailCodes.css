@@ -1,0 +1,86 @@
+BODY {font-family:arial;}
+
+* {margin:0px;}
+
+DIV.mailCodesPrint {
+background: white;
+width: 480px;
+padding:20px;
+}
+
+DIV.mailCodesPrint H2 {
+font-size: 32px;
+background: url(../../images/uk/mailCodes.png) no-repeat;
+padding: 0 0 10px 50px;
+}
+
+DIV.mailCodesPrint H2 EM {
+font-size: 14px;
+font-style: normal;
+}
+
+DIV.mailCodesPrint OL {
+float: left;
+font-size: 12px;
+padding: 0 0 0 25px;
+}
+
+DIV.mailCodesPrint OL LI {
+padding-bottom: 10px;
+}
+
+DIV.mailCodesPrint .mailCodesCutout {
+width: 420px;
+float: left;
+padding: 10px;
+font-size: 12px;
+}
+
+DIV.mailCodesPrint .mailCodesCutout H3 {
+font-size: 24px;
+}
+
+DIV.mailCodesPrint .mailCodesCutout H4 {
+font-size: 12px;
+float: right;
+margin: -20px 0 0 0;
+}
+
+DIV.mailCodesPrint .mailCodesCutout H5 {
+font-size: 12px;
+font-weight: normal;
+padding-bottom: 10px;
+}
+
+DIV.mailCodesPrint .mailCodesCutout H6 {
+font-size: 15px;
+}
+
+DIV.mailCodesPrint .mailCodesCutout SPAN.small {
+font-size: 11px;
+line-height: 11px;
+}
+
+DIV.mailCodesPrint .mailCodesCutoutTop {
+border-left: dashed 1px #000;
+border-top: dashed 1px #000;
+border-right: dashed 1px #000;
+padding: 10px;
+}
+
+DIV.mailCodesPrint .mailCodesCutoutBottom {
+border: dashed 1px #000;
+padding: 10px;
+}
+
+DIV.mailCodesPrint .mailCodesCutoutBottom STRONG {
+}
+
+DIV.mailCodesPrint P {
+clear: both;
+}
+
+DIV.mailCodesPrint OL.fullsize {
+margin-top: 10px;
+}
+

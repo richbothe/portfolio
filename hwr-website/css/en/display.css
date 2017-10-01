@@ -1,0 +1,34 @@
+TABLE.browseProductsData TR TH.sorted {
+color: white;
+}
+
+TABLE.browseProductsData TR TH DIV.order2,
+TABLE.browseProductsData TR TH DIV.order1,
+TABLE.browseProductsData TR TH DIV.sorted{
+float: right;
+margin-right: 10px;
+margin-top: 3px;
+width: 14px;
+height: 11px;
+}
+
+TABLE.browseProductsData TR TH DIV.order2 {
+background: url(../../images/en/arrow-decals.png) no-repeat 0px -1px;
+}
+
+TABLE.browseProductsData TR TH DIV.order1 {
+background: url(../../images/en/arrow-decals.png) no-repeat -20px -1px;
+}
+
+TABLE.browseProductsData TR TH DIV.sortable {
+background: url(../../images/en/arrow-decals.png) no-repeat -40px -1px;
+}
+
+TABLE.browseProductsData TR.even {
+background-color: #f5f5f5;
+}
+
+TABLE.browseProductsData TR TH.sorted A {
+color:white;
+}
+

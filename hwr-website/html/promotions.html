@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hardware Rewards</title> 
+
+    <link rel="stylesheet" href="../css/en/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/hwr.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/fsr_ok.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/display.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/hwr_phase2.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/print.css" type="text/css" media="print">
+    <!--[if IE 7]><link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome-ie7.css" type="text/css" media="screen"><![endif]-->
+
+	<!--  Shortcut Icon -->
+    <link rel="shortcut icon" href="fsr.ico" type="../image/png" />
+       
+</head>
+<body>
+
+	<div class="mainOuter">
+
+		<div class="header">
+        	<div class="logo"></div>
+			<div class="navigation">
+				<ul>
+					<li><a href="#" id="navUploadInvoiceLink">UPLOAD<br>IVOICE</a></li>
+					<li><a href="mypromotions.do" id="navViewOffersLink">PROMOTIONS <br>&amp; SPECIAL OFFERS</a></li>
+					<li><a href="participatingproducts.do" id="navBrowseProductsLink">ELIGIBLE<br>PRODUCTS</a></li>
+					<li><a href="rewardscatalog.do" id="navRedeemRewardsLink">SHOP<br>REWARDS</a></li>
+					<li><a href="loggedinlearnmore.do" id="navLearnMoreLink">LEARN<br>MORE</a></li>
+				</ul>
+			</div>
+			<div class="userInfo">
+	        	<h1>Welcome, <em>Ron </em></h1>
+	        	
+	        	<h2><span>28001 </span> POINTS</h2>
+	        	<div class="details">
+	           	   <h1>Welcome, <em>Ron </em></h1>
+	           	   <a href="/hardwarerewards/myprofile.do" id="accountLink">My Account</a>
+	           	   <a href="javaScript:submitform();" id="chatLink">Chat is: online</a> 
+	           	   <a href="/hardwarerewards/logon.do?cmd=logout" id="logoutLink">Log Out</a> 
+	           	</div>
+	      	</div>			
+		</div>
+
+		<div class="mainContainer">
+			<div class="container">
+
+				<div class="viewOffersMain">
+
+					<!-- LEFT COL -->
+					<div class="viewOffersLeftCol">
+						<div class="bannerText">
+							<h1>Promotions &amp; Offers</h1>
+							<h3>Below you will find promotions and special offers currently offered by participating brands. Check out ways you can boost your point balance and earn rewards faster!</h3>
+							<div id="error1" style="display: block;">
+								<br>This information is current as of: March 19, 2014
+							</div>
+						</div>
+						
+						
+						<form class="form-inline" name="myPromotionsForm" method="post" action="/hardwarerewards/mypromotions.do">
+					  		<input type="hidden" name="mode" value="">
+					   		<input type="hidden" name="cmd" value="">
+					   
+							<div class="viewOffersWrapper">					
+								<div class="viewOffersToolbar">
+									<b>Sort by:</b>
+									<select name="sortby" onchange="javaScript:changeSort();" id="sortByDropdown">
+										<option value="" selected="selected">-select one-</option>
+										<option value="1">Newest</option>
+										<option value="2">Expiration Date</option>
+										<option value="3">Sponsor</option>
+									</select>
+									&nbsp;
+									&nbsp;
+									<b>Display:</b>
+									&nbsp;
+									<input type="checkbox" name="showPrograms" value="true" checked="checked" onclick="javaScript:changeSort();">	<label for="">Current Promotions</label>
+									&nbsp;
+									<input type="checkbox" name="showOffers" value="true" checked="checked" onclick="javaScript:changeSort();">	<label for="showPrograms">Special Offers</label>
+								</div>
+
+								<div id="table" style="display: block;">
+									<table id="myPromotionsInfo" cellpadding="0" class="browseProductsData" cellspacing="0">
+										<thead>
+											<tr>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="odd">
+												<td style="display: none;" class="off">
+											    	<!-- For highligting direct Promotion -->
+											    </td>
+											    <td class="thumb" width="20">
+											    	<img onerror="javaScript:onImgErrorSmall(this)" src="../images/PromoQA_1.jpg" border="0" class="partnerlogo">
+											    </td>
+											    <td>
+													<dl class="accordion">
+														<dt>
+															<div>
+																<h1>
+																	<a rel="mypromotions.do?cmd=getPromotionDetails&amp;promoId=13845 rewardsModal" title="Offer Details">Set It and Forget It With Honeywell!</a>
+																</h1>
+																<h2>04/01/2014 - 12/31/2014</h2>
+													       		<p>Set it and forget it with Honeywell. Just sell 5 non-programmable thermostats to your customers and earn 5,000 points. It's that simple.</p>
+													       	</div>
+													    </dt>
+													    <dd style="display: none;">
+															<div class="promotiondetails">Very simple. It seems that unless a thermostat is internet-enabled, most people never use the programming features of modern thermostats. This one avoids the unnecessary complexity, allowing even old people to use it.<br><br>It also independently remembers both the heater temp and the a/c temp, making it easy to switch between the two systems without resetting each value. This is a great replacement to an old dial/lever thermostat -- digital displays offer precision to 1 degree thus eliminating the fiddling required to get just the right temperature, as with old systems.<br><br>The installation guide is straight-forward and took about 15 minutes. </div>
+														</dd>
+													</dl>
+												</td>
+												<!-- <h1> --><!-- </h1> -->
+												<!-- </td> -->
+											</tr>
+											<tr class="even">
+												<td style="display: none;" class="off">
+											    	<!-- For highligting direct Promotion -->
+											    </td>
+											    <td class="thumb" width="20">
+											    	<img onerror="javaScript:onImgErrorSmall(this)" src="../images/Default_Promo_US-Copy.jpg" border="0" class="partnerlogo">
+											    </td>
+											    <td>  
+													<dl class="accordion">
+														<dt>
+															<div>
+																<h1>
+																	<a rel="mypromotions.do?cmd=getPromotionDetails&amp;promoId=13847 rewardsModal" title="Offer Details">
+																	aSAD<br></a>
+																</h1>  
+																<h2>03/18/2014 - 04/01/2019</h2>
+												       			safasdf<br>
+												       		</div>
+												       	</dt>
+												       	<dd style="display: none;">
+															<div class="promotiondetails">sdazsd<br></div>
+														</dd>
+													</dl>
+												</td>
+												<!-- <h1> --><!-- </h1> -->
+												<!-- </td> -->
+											</tr>
+											<tr class="odd">
+												<td style="display: none;" class="off">
+									                <!-- For highligting direct Promotion -->
+										        </td>
+										        <td class="thumb" width="20">
+										        	<img onerror="javaScript:onImgErrorSmall(this)" src="../images/Default_Promo_US-Copy.jpg" border="0" class="partnerlogo">
+										        </td>
+										        <td>  
+													<dl class="accordion">
+														<dt>
+															<div>
+																<h1>
+																	<a rel="mypromotions.do?cmd=getPromotionDetails&amp;promoId=13841 rewardsModal" title="Offer Details">
+																	3 For All Promotion</a>
+																</h1>
+																<h2>02/01/2014 - 06/30/2014</h2>
+												       			Earn big points with Hobbit sized water heaters. Enter three codes from any 6-40-GORT water heater and earn 1,546 bonus points. 
+												       		</div>
+												       	</dt>
+												       	<dd style="display: none;">
+															<div class="promotiondetails">Hobbits are a fictional diminutive humanoid race who inhabit the lands of Middle-earth in J. R. R. Tolkien's fiction.<br><br>Hobbits first appeared in the novel The Hobbit, in which the main protagonist, Bilbo Baggins, is the titular hobbit. The novel The Lord of the Rings includes more Hobbits as major characters, Frodo Baggins, Samwise Gamgee, Peregrin Took and Meriadoc Brandybuck, as well as several other minor hobbit characters. Hobbits are also briefly mentioned in The Silmarillion and Unfinished Tales. </div>
+														</dd>
+													</dl>
+												</td>
+												<!-- <h1> --><!-- </h1> -->
+												<!-- </td> -->
+											</tr>
+											<tr class="even">
+												<td style="display: none;" class="off">
+									                <!-- For highligting direct Promotion -->
+										        </td>
+										        <td class="thumb" width="20">
+										        	<img onerror="javaScript:onImgErrorSmall(this)" src="../images/sponsor_243qa.jpg" border="0" class="partnerlogo">
+										        </td>
+										        <td>  
+													<dl class="accordion">
+														<dt>
+															<div>
+																<h1>
+																	<a rel="mypromotions.do?cmd=getPromotionDetails&amp;promoId=13843 rewardsModal" title="Offer Details">
+																	It's Winter! Crank Up That Thermostat!</a>
+																</h1>
+																<h2>02/01/2014 - 12/31/2014</h2>
+												       			Winter got you down? Well, crank it up! Now is the best time to buy new thermostats for your customers.
+												       		</div>
+												       	</dt>
+												       	<dd style="display: none;">
+															<div class="promotiondetails">Replace that thermostat before it's too late! <ul><li>PRO 3000 Non-Programmable Thermostat</li><li>Backlit digital display</li><li>Basic slide switch operation</li><li>Displays both current and set temperature on screen</li></ul><p>We will give you nearly 10,000 bonus points for each thermostat purchased!</p></div>
+														</dd>
+													</dl>
+												</td>
+												<!-- <h1> --><!-- </h1> -->
+												<!-- </td> -->
+											</tr>
+											<tr class="odd">
+												<td style="display: none;" class="off">
+									                <!-- For highligting direct Promotion -->
+										        </td>
+										        <td class="thumb" width="20">
+										        	<img onerror="javaScript:onImgErrorSmall(this)" src="../images/brand_5889qa.jpg" border="0" class="partnerlogo">
+										        </td>
+										        <td>  
+													<dl class="accordion">
+														<dt>
+															<div>
+																<h1>
+																	<a rel="mypromotions.do?cmd=getPromotionDetails&amp;promoId=13835 rewardsModal" title="Offer Details">
+																	Heat Up Your Sales With Double Points On Thermostats</a>
+																</h1>  
+																<h2>11/15/2013 - 06/30/2014</h2>
+												       			Looking to heat up your sales? Just crank up your thermostat sales! For the rest of 2013&nbsp;&amp; through June of 2014 earn double points on all thermostats.
+												       		</div>
+												       	</dt>
+												       	<dd style="display: none;">
+															<div class="promotiondetails">The title of <a href="http://starwars.wikia.com/wiki/Jedi_Master" target="_blank">Jedi Master</a> was the highest formal rank obtainable by a member of the <b>Jedi Order</b>. Reserved for those who had shown exceptional devotion and skill as well as balance in the Force and often combat, only individuals who had been given the rank of Master could sit on the Jedi High Council, with few exceptions (such as Anakin Skywalker), or any of the three other Councils.<br><br>The rank of Master was a title bestowed upon very few Knights in every generation. As such, Masters made up the smallest percent of the Order's membership. The most common path to this rank was to train several Padawans as a Knight, typically one right after the other, and have them all successfully pass their Jedi Trials. If one did not wish to train several students, a Knight could choose to undergo a modified version of the Trials of Knighthood, or gain attention for their service to the Republic. Each of these feats could gain the High Council's <i>acknowledgment</i> and result in a promotion to the rank of Master.</div>
+														</dd>
+													</dl>
+												</td>
+												<!-- <h1> --><!-- </h1> -->
+												<!-- </td> -->
+											</tr>
+											<tr class="even">
+												<td style="display: none;" class="off">
+									                <!-- For highligting direct Promotion -->
+										        </td>
+										        <td class="thumb" width="20">
+										        	<img onerror="javaScript:onImgErrorSmall(this)" src="../images/PromoQA_3.jpg" border="0" class="partnerlogo">
+										        </td>
+										        <td>  
+													<dl class="accordion">
+														<dt>
+															<div>
+																<h1>
+																	<a rel="mypromotions.do?cmd=getPromotionDetails&amp;promoId=13815 rewardsModal" title="Offer Details">
+																	<p>Welcome to Hardware rewards!</p></a>
+																</h1>
+																<h2>05/25/2013 - 05/25/2014</h2>
+												       			Welcome to Harware Rewards!
+												       		</div>
+												       	</dt>
+												       	<dd style="display: none;">
+															<div class="promotiondetails"><p>Thanks for&nbsp;creating an account here at Hardware Rewards!</p><ul><li><div><b>Enter bonus codes</b></div></li><li><div><u>Scan invoices</u></div></li><li><div><i>spend points to get rewards!</i></div></li></ul><p><i>check the page you are currently on, and the E-Newsletter for upcoming promotions and offers.</i></p></div>
+														</dd>
+													</dl>
+												</td>
+												<!-- <h1>  --><!-- </h1> -->
+												<!-- </td> -->
+											</tr>
+										</tbody>
+									</table>
+									<span class="pagelinks"></span>
+									<span class="pagelinks"><strong>1</strong></span>
+								</div>
+
+								<div id="error" style="display: none;">
+								    <br>
+									<b>	There is nothing to display. Please check your display selection(s) above.</b>
+								</div>
+
+								<div id="generalerror"></div>
+							</div>
+						</form>
+					</div><!--end leftCol-->
+					<!-- RIGHT RAIL -->
+
+					<script>
+						var deatilsAppened;
+						(function($) {
+
+							var allPanels = $('.accordion > dd').hide();
+
+							$('.accordion > dt > div').click(function() {
+								allPanels.slideUp();
+								var url = $(this).find('a').attr('rel').split(' ');
+								//console.log(url[0]);
+								if(!deatilsAppened)
+									{
+										getajaxdata(url[0]);		
+									}
+								$(this).parent().next().toggle();
+								return false;
+							});
+
+						})(jQuery);
+
+						function getajaxdata(promodetailurl)
+							{
+							$.ajax({
+		                        url: promodetailurl,
+		                        type: 'GET',
+		                        dataType: 'html',
+		                        success: function(data, textStatus, xhr) {
+									 $(' dd .promotiondetails').append($(data).find('p'));
+									 deatilsAppened =true;
+		                        },
+		                        error: function(xhr, textStatus, errorThrown) {
+		                            $('#promotiondetails').html(textStatus);
+		                        }
+		                    });
+						}
+					</script>
+
+					<!--  Banner Ads -->
+
+					<style>
+						.accordion {
+						margin: 5px;   
+						dt, dd {
+						  padding: 10px;
+						  border: 1px solid black;
+						  border-bottom: 0; 
+						  &:last-of-type {
+						    border-bottom: 1px solid black; 
+						  }
+						  a {
+						    display: block;
+						    color: black;
+						    font-weight: bold;
+						  }
+						}
+						dd {
+						 border-top: 0; 
+						 font-size: 12px;
+						 &:last-of-type {
+						   border-top: 1px solid white;
+						   position: relative;
+						   top: -1px;
+						 }
+						}
+						}
+						a {
+						text-decoration: none;
+						}
+					</style>
+
+					<script>
+						$('UL.browseProductsTabs > LI').removeClass('navOn');
+						$('UL.browseProductsTabs > LI > A#servicesLink').parent('LI').addClass('navOn');
+						
+
+						hideTable();
+
+						function hideTable()
+						{
+
+							var showoffers = 	document.myPromotionsForm.elements["showOffers"].checked;
+							var showPrograms = document.myPromotionsForm.elements["showPrograms"].checked;  
+
+
+							if( !showoffers && !showPrograms)
+							{
+							table.style.display = 'none';	
+							error.style.display = 'block';	
+							error1.style.display = 'none';	
+
+							}else
+							{
+							table.style.display = 'block';
+							error.style.display = 'none';	
+							error1.style.display = 'block';	
+							}
+
+						}
+					</script>
+
+					<script>
+					//clear old classes
+						$('div.navigation UL > LI.navOn > A').removeClass('navLinkOn');
+						$('div.navigation  UL > LI.navOn').removeClass('navOn');
+						
+						//add for current
+						$('div.navigation UL > LI > A#navViewOffersLink').parent('LI').addClass('navOn');
+						$('div.navigation UL> LI > A#navViewOffersLink').addClass('navLinkOn');
+					</script>
+
+			<!--  Banner Ads -->
+			
+		</div>
+			</div><!-- /.container -->
+		</div><!-- /.mainContainer -->
+					
+	         
+		<!--  FOOTER -->
+		<div class="footer"> 
+			<!--  COPYRIGHT -->
+			<div class="copyright">Copyright &copy;2013-2014, Hardware Rewards&reg;. All rights reserved.</div>
+
+			<!--  FOOTER LINKS -->
+			<div class="footerLinks thin"> 
+				<a href="faq.do">Help</a>
+				<span class="footerLinkDivider">&nbsp;|</span>
+				<a href="#" class="modalInput" rel="privacypolicy.do privacyPolicy" title="PRIVACY POLICY">Privacy Policy</a>
+				<span class="footerLinkDivider">&nbsp;|</span>
+				<a href="#" class="modalInput" rel="termsconditions.do termsConditions" title="TERMS & CONDITIONS">Terms &amp; Conditions</a>
+				<span class="footerLinkDivider">&nbsp;|</span>
+				<a href="sitemap.do">Site Map</a>
+				<span class="footerLinkDivider">&nbsp;|</span>
+				<a href="contactuslanding.do">Contact Us</a>
+			</div>       
+		</div>
+
+	</div><!-- /.mainOuter -->
+
+	<!-- View Scan - Invoice Modal -->
+	<div id="viewScan1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+			<h3 id="myModalLabel">Invoice: 122034425</h3>
+		</div>
+		<div class="modal-body">
+			<img src="../images/en/invoice-sample.png">
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-cancel btn-small" data-dismiss="modal" aria-hidden="true">Close</button>
+		</div>
+	</div>
+
+	<!-- javascript files -->
+	<script src="../scripts/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery-migrate-1.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/bootstrap-transition.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.tools.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.spinner.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.treeview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/chat.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/fsr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/hwr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.cycle.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery-ui-1.10.4.custom.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+	
+			
+</body>
+</html>

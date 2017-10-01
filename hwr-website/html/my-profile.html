@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hardware Rewards</title> 
+
+    <link rel="stylesheet" href="../css/en/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/hwr.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/fsr_ok.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/display.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/hwr_phase2.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/en/print.css" type="text/css" media="print">
+    <!--[if IE 7]><link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome-ie7.css" type="text/css" media="screen"><![endif]-->
+
+	<!--  Shortcut Icon -->
+    <link rel="shortcut icon" href="fsr.ico" type="../image/png" />
+       
+</head>
+<body>
+
+	<div class="mainOuter">
+
+		<div class="header">
+        	<div class="logo"></div>
+			<div class="navigation">
+				<ul>
+					<li><a href="#" id="navUploadInvoiceLink">UPLOAD<br>IVOICE</a></li>
+					<li><a href="mypromotions.do" id="navViewOffersLink">PROMOTIONS <br>&amp; SPECIAL OFFERS</a></li>
+					<li><a href="participatingproducts.do" id="navBrowseProductsLink">ELIGIBLE<br>PRODUCTS</a></li>
+					<li><a href="rewardscatalog.do" id="navRedeemRewardsLink">SHOP<br>REWARDS</a></li>
+					<li><a href="loggedinlearnmore.do" id="navLearnMoreLink">LEARN<br>MORE</a></li>
+				</ul>
+			</div>
+			<div class="userInfo">
+	        	<h1>Welcome, <em>Ron </em></h1>
+	        	
+	        	<h2><span>28001 </span> POINTS</h2>
+	        	<div class="details">
+	           	   <h1>Welcome, <em>Ron </em></h1>
+	           	   <a href="/hardwarerewards/myprofile.do" id="accountLink">My Account</a>
+	           	   <a href="javaScript:submitform();" id="chatLink">Chat is: online</a> 
+	           	   <a href="/hardwarerewards/logon.do?cmd=logout" id="logoutLink">Log Out</a> 
+	           	</div>
+	      	</div>			
+		</div>
+
+		<div class="mainContainer">
+			<div class="container">
+
+				<div class="myAccountLeftCol myAccount">
+					<h1>My Account</h1>
+					<ul class="myAccountTabs">
+						<li class="navOn"><a href="myprofile.do" id="myprofilelink">My Profile</a></li>
+						<!-- Commented for Hardware reward as distributors will not be available for HWR -->
+						<li><a href="delegates.do" id="mydelegateslink">My Delegates</a></li>
+						<li><a href="mystatement.do" id="mystatementlink">My Statement</a></li>
+						<li><a href="emailcommunications.do" id="mycommunicationslink">My Communications</a></li>
+						<li><a href="myinvoice.do" id="myinvoicelink">My Invoice</a></li>
+					</ul>
+
+					<div class="myAccountWrapper">
+						<form name="myProfileForm" method="post" action="/hardwarerewards/myprofile.do">
+							<input type="hidden" name="cmd" value="">
+							<input type="hidden" name="mode" value="">
+							<input type="hidden" name="chainMatchInfo.enabledFlag" value="OFF">
+							<input type="hidden" name="seg3Info.enabledFlag" value="OFF">
+							<input type="hidden" name="origPassword" value="F6A6263167C92DE8644AC998B3C4E4D1">
+
+							<div id="personalInfoWrapper" class="form darkerLabel ">
+								<p>Make updates to your info as necessary by using the 'Edit' links below.</p>
+								<p>
+									<a href="javascript:doEditPersonal();" class="iconLink edit big floatRight">Edit Personal Info</a>
+								</p>
+								<h1>Personal Information</h1>
+								<label>Member ID:</label>1249556
+								<br>								
+
+								<input type="hidden" name="orgType" value="FO">
+								<label>Job Title:</label>Other
+								<input type="hidden" name="contactTitleDescription" value="Other">
+								<br>	
+
+					      		<label>Other:</label>Jedi
+					    		<input type="hidden" name="otherTitle" value="Jedi">
+								<br>
+								<br>
+
+								<label>First Name:</label>Ron
+								<input type="hidden" name="firstName" value="Ron">
+								<br>
+								
+								<label>Last Name:</label>Mar
+								<input type="hidden" name="lastName" value="Mar">
+								<br>
+			 
+								<label>Mobile Phone:</label>2783492734
+								<input type="hidden" name="mobilePhoneFormated" value="2783492734">
+								<br>
+
+								<label>Primary Contact Phone:</label>Business
+								<input type="hidden" name="primaryPhoneTypeDescription" value="Business">
+								<br>
+
+								<label>Current Email:</label><em>r@en.com</em>
+								<input type="hidden" name="currentEmailAddress" value="r@en.com">
+								<br>
+
+								<label>Password:</label>********************************
+								<input type="hidden" name="asteriskPassword" value="********************************">
+								<br>
+
+								<label>Security Question:</label>What is your pet's name?
+								<input type="hidden" name="verificationQuestionDisplay" value="What is your pet's name?">
+								<br>
+
+								<label>Security Answer:</label>********************************
+								<input type="hidden" name="asteriskVerificationAnswer" value="********************************">
+								<br>
+							</div> <!-- personalInfoWrapper -->
+
+							<!-- Business Information -->
+							<div id="businessInfoWrapper" class="form darkerLabel ">
+								<p><a href="javascript:doEditBusiness();" class="iconLink edit big floatRight">Edit Business Info</a></p>
+								<h1>Business Information</h1>
+
+								<!-- Parent Company -->
+								<label>Company Name:</label>Ron's Hardware Store
+								<input type="hidden" name="businessAddress.parentCompany" value="Ron's Hardware Store">
+								<br>
+
+								<!-- Business Name -->
+								<!-- Business Address line 1 -->
+								<label class="verticalAlignTop">Business Address:</label>
+								<span class="inlineBlock">8865 Brunell Way</span>
+								<input type="hidden" name="businessAddress.addressLine1" value="8865 Brunell Way">
+								<br>
+
+								<!-- Address Line2 -->
+								<!-- Address Line3 -->
+								<!-- City -->
+								<label>City:</label>Inver Grove Heights
+								<input type="hidden" name="businessAddress.locality" value="Inver Grove Heights">
+								<br>
+
+								<!-- State -->
+								<label>State:</label>MN
+								<input type="hidden" name="businessAddress.province" value="MN">
+								<br>
+
+								<!-- US Zip Code -->
+								<label>Zip Code:</label>55076-5159
+								<input type="hidden" name="businessAddress.postalCode" value="55076-5159">
+								<br>
+
+								<!-- NON UK Business Phone-->
+								<label>Main Business Phone:</label>7826478342
+								<input type="hidden" name="businessPhoneFormated" value="7826478342">&nbsp;&nbsp;&nbsp; ext:&nbsp;&nbsp;501
+								<input type="hidden" name="phoneExt" value="501">
+								<br>
+							</div>
+			
+						</form>
+					</div>
+				</div>
+			</div><!-- /.container -->
+		</div><!-- /.mainContainer -->
+					
+	         
+		<!--  FOOTER -->
+		<div class="footer"> 
+			<!--  COPYRIGHT -->
+			<div class="copyright">Copyright &copy;2013-2014, Hardware Rewards&reg;. All rights reserved.</div>
+
+			<!--  FOOTER LINKS -->
+			<div class="footerLinks thin"> 
+				<a href="faq.do">Help</a>
+				<span class="footerLinkDivider">&nbsp;|</span>
+				<a href="#" class="modalInput" rel="privacypolicy.do privacyPolicy" title="PRIVACY POLICY">Privacy Policy</a>
+				<span class="footerLinkDivider">&nbsp;|</span>
+				<a href="#" class="modalInput" rel="termsconditions.do termsConditions" title="TERMS & CONDITIONS">Terms &amp; Conditions</a>
+				<span class="footerLinkDivider">&nbsp;|</span>
+				<a href="sitemap.do">Site Map</a>
+				<span class="footerLinkDivider">&nbsp;|</span>
+				<a href="contactuslanding.do">Contact Us</a>
+			</div>       
+		</div>
+
+	</div><!-- /.mainOuter -->
+
+	<!-- javascript files -->
+	<script src="../scripts/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery-migrate-1.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/bootstrap-transition.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.tools.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.spinner.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.treeview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/chat.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/fsr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/hwr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.cycle.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery-ui-1.10.4.custom.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+	
+			
+</body>
+</html>
