@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>MatchMaker</title>
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-3.2.0.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/dataTables.bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome-4.1.0.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+	<!-- HTML5 Shim IE8 support of HTML5 elements -->
+    <!--[if lt IE 9]><script src="../js/html5shiv.min.js"></script><![endif]-->
+
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+			<div class="logo"></div>
+			<div class="profile">
+				<span>Welcome, First Name</span>
+				<a href="login.html">Logout</a>
+			</div>
+		</div>
+	</header>
+
+	<nav class="container">
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active">
+				<a href="invoices.html">Invoices</a>
+			</li>
+			<li><a href="admin.html">Admin</a></li>
+		</ul>
+	</nav>
+
+	<section class="container">
+		<h1>Invoices</h1>
+		<p>Select an invoice below to view its details and find a match.</p>
+		<div class="input-group col-xs-3 input-group-sm">
+			<input type="text" id="searchInvoices" class="form-control search" placeholder="Search for Confirmation #...">
+			<span class="input-group-btn">
+				<button class="btn btn-default"><i class="fa fa-search fa-lg"></i></button>
+			</span>
+		</div>
+		<table id="invoices" class="display table table-striped order-column" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th>Distributor</th>
+					<th>Confirmation &#35;</th>
+					<th>Date Submitted</th>
+					<th>Products</th>
+					<th>Pending Matches</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Sysco</td>
+					<td><a href="invoices-matchMaking.html">12345</a></td>
+					<td>03/02/14</td>
+					<td class="text-center">84</td>
+					<td class="text-center">125,654</td>
+				</tr>
+				<tr>
+					<td>Reinhart Foodservice, LLC</td>
+					<td><a href="invoices-matchMaking.html">172229</a></td>
+					<td>05/21/14</td>
+					<td class="text-center">104</td>
+					<td class="text-center">15</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3">
+					<div class="logo-small"></div>
+				</div>
+				<div class="col-xs-9">
+					<ul>
+						<li><a href="help.html">Help</a></li>
+						<li><a href="privacy-policy.html">Privacy Policy</a></li>
+						<li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+						<li><a href="sitemap.html">Site Map</a></li>
+						<li><A href="contact-us.html">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="copyright">&copy; 2014 Foodservice Rewards. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascripts at the bottom for faster page loading. -->
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-3.2.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.dataTables-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../js/dataTables.bootstrap.js"></script>
+
+	<script>
+
+		// Initialize dataTable
+		$(document).ready(function() {
+			$('#invoices').dataTable( {
+				"lengthChange": false,
+				"searching": false,
+				"bAutoWidth": false,
+				"iDisplayLength": 20,
+				"order": [[ 2, "asc" ]]
+			});
+
+			// Associate custom input with dataTable.
+			var table = $('#invoices').DataTable();
+
+			$('#searchInvoices').on( 'keyup', function() {
+				table.search( this.value).draw();
+			});
+		});
+
+	</script>
+</body>
+
+</html>
