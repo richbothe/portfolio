@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.03 37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e1574c;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <title>percent-flag-red</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path class="cls-1" d="M60,0H8.88a2,2,0,0,0-2,2v8.62a2.6,2.6,0,0,0-.54.4L.77,16.63a2.65,2.65,0,0,0,0,3.74L6.34,26a2.6,2.6,0,0,0,.54.4V35a2,2,0,0,0,2,2H60a2,2,0,0,0,2-2V2A2,2,0,0,0,60,0Z"/>
+    </g>
+  </g>
+</svg>
