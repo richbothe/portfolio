@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Rewards</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-2.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive-2.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="../css/home-global.css">
+    <link rel="stylesheet" type="text/css" href="../css/eligible-retailers.css">
+    <!-- [if IE 7]><link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome-ie7.min.css"><![endif]-->
+
+    <!-- Javascripts required for page load.  All others at the bottom. -->
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+        <section id="page">
+            <div id="scrollablecontent" style="width: 100%; position: absolute; left: 0%;">
+                <header class="page-header" style="position: fixed;">
+                    <label class="nav-tap"> <i class="icon-reorder"></i> </label>
+                    <div class="logo">
+                        <img src="../images/hwr-logo.png" alt="Contractor Rewards" class="trigger">
+                    </div>
+                    <a href="notification.do" id="notificationCount"> <i class="comment-bubble"></i> </a>
+                </header>
+                <article class="content-wrapper cms-content">
+                    <div id="scroller" class="content" style="overflow: hidden;">
+
+                        <!-- Search bar  -->
+                        <div class="search-wrap">
+                            <a href="#" id="eligible-search-info"><i class="icon-info-sign icon-large"></i></a>
+                            <div class="input-outer-edge searchbox">
+                                <div class="input-bg">
+                                    <input type="text" placeholder="Search" id="eligible-retailer-search">
+                                    <i class="icon-search"></i>
+                                    <div id="icon-remove"></div>
+                                    <!-- This is set to display:none in the css, should be shown once a user begins entering text. -->
+                                </div>
+                            </div>
+                            <div id="search-info-drawer">
+                                <div class="info-drawer-content">
+                                    <h4>
+                                        <p align="left">Type the first few letters above. <br></p><p align="left">*Contractor Rewards is not affiliated with these retailers and distributors<br></p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- end search bar -->
+
+                        <!-- Title Bar -->
+                        <div class="title-bar">
+                            <div class="btn-group">
+                                <a class="btn btn-left pressed" id="eligible-recent">Recent</a>
+                                <a class="btn btn-right" id="eligible-all">All</a>
+                            </div>
+                            <h1>Eligible Distributors</h1>
+                        </div>
+                        <!-- end title bar -->
+
+                        <!-- Recent Distributors -->
+                        <div id="recent-retailers">                        
+                            <div class="expandable" id="acehardware">
+                                <div class="expandable-title-recent">
+                                    <ul>
+                                        <li>
+                                            <!-- This is the retailer logo -->
+                                            <img src="../images/logos/QA_Ace.jpg" alt="" class="retailer-logo">
+                                            <!-- The name of the retailer -->
+                                            <h3 class="title-text">Ace Hardware</h3>
+                                            <input type="hidden" id="retailerid" value="">
+                                            <!-- Here is a button/link with chevron icon -->
+                                            <a href="#" class="icon-chevron" value="81"> <input type="hidden" id="retailertype" value="INVOICE">
+                                            <i class="icon-chevron-right icon-2x"></i> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
+                            <div class="expandable" id="doitbest">
+                                <div class="expandable-title-recent">
+                                    <ul>
+                                        <li>
+                                            <!-- This is the retailer logo -->
+                                            <img src="../images/logos/#" alt="" class="retailer-logo">
+                                            <!-- The name of the retailer -->
+                                            <h3 class="title-text">Do it Best, Corp</h3>
+                                            <input type="hidden" id="retailerid" value="">
+                                            <!-- Here is a button/link with chevron icon -->
+                                            <a href="#" class="icon-chevron" value="121"> <input type="hidden" id="retailertype" value="INVOICE">
+                                            <i class="icon-chevron-right icon-2x"></i> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
+                            <div class="expandable" id="orgill">
+                                <div class="expandable-title-recent">
+                                    <ul>
+                                        <li>
+                                            <!-- This is the retailer logo -->
+                                            <img src="../images/logos/#" alt="" class="retailer-logo">
+                                            <!-- The name of the retailer -->
+                                            <h3 class="title-text">Orgill, Inc</h3>
+                                            <input type="hidden" id="retailerid" value="">
+                                            <!-- Here is a button/link with chevron icon -->
+                                            <a href="#" class="icon-chevron" value="83"> <input type="hidden" id="retailertype" value="RECEIPT">
+                                            <i class="icon-chevron-right icon-2x"></i> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
+                            <div class="expandable" id="truevalu">
+                                <div class="expandable-title-recent">
+                                    <ul>
+                                        <li>
+                                            <!-- This is the retailer logo -->
+                                            <img src="../images/logos/QA_True_Value.jpg" alt="" class="retailer-logo">
+                                            <!-- The name of the retailer -->
+                                            <h3 class="title-text">True Valu</h3>
+                                            <input type="hidden" id="retailerid" value="">
+                                            <!-- Here is a button/link with chevron icon -->
+                                            <a href="#" class="icon-chevron" value="122"> <input type="hidden" id="retailertype" value="INVOICE">
+                                            <i class="icon-chevron-right icon-2x"></i> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end recent retailers -->
+                        
+                    </div>
+                </article>
+            </div>
+        </section>
+    <!-- </div> --><!-- /.container -->
+
+    <!-- Javascript here for faster page load -->
+    <script src="../scripts/jquery-1.11.0.min.js"></script>
+    <script src="../scripts/bootstrap-2.3.2.min.js"></script>
+    <script src="../scripts/global-scripts.js"></script>
+
+</body>
+</html>

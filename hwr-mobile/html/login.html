@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hardware Rewards</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-2.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive-2.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="../css/home-global.css">
+    <!-- [if IE 7]><link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome-ie7.min.css"><![endif]-->
+
+	<!-- Javascripts required for page load.  All others at the bottom. -->
+	<script>
+		var result = '';
+		if (result == "error"){
+			showdialogbox("error");
+		}
+
+		function logonSubmit() {
+			document.LogonForm.submit();
+		}
+		function submitOnEnter(event) {
+			if (event.keyCode == 13) {
+				logonSubmit();
+			}
+		}
+			
+		function showdialogbox(windowname) {
+			if (windowname == "forgotpassword") {
+				document.getElementById("msgheader").innerHTML = 'Password Reset';
+				document.getElementById("msgbody").innerHTML = 'To reset your password, you must go to <strong>www.EcoBonus.com</strong>.  From the &quot;Sign In&quot; page, click the &quot;Forgot your password?&quot; link.';
+				$(document).ready(function(){
+					 $("#lightbox, #forgotpasswordbox").fadeIn(300);  
+					 $("a#close-panel").click(function(){  
+					     $("#lightbox, #forgotpasswordbox").fadeOut(300);  
+					 })  
+					})
+				
+			}
+			else{
+			$(document).ready(function(){
+					 $("#lightbox, #errorbox").fadeIn(0);  
+					 $("a#close-panel").click(function(){  
+					     $("#lightbox, #errorbox").fadeOut(0);  
+					 })  
+					})
+			}		
+		}	
+
+		function rememberme() {
+		 	var uid = '';
+			var pwd = '';
+			var remember = document.getElementById('rememberme');
+			if (remember.checked) {
+				uid = document.getElementById('userid').value;
+			 	pwd = document.getElementById('password').value;
+			 	AndroidFunction.rememberMe(uid,pwd);
+			}	
+			else {
+				AndroidFunction.dontrememberMe();
+			}	
+			logonSubmit();
+		}	
+
+		function populatelogin(uid,password){
+			document.getElementById('userid').value = uid;
+			document.getElementById('password').value = password;
+			if (uid != "") {
+				document.getElementById("rememberme").checked = true;
+			}
+			else {
+				document.getElementById("rememberme").checked = false;		
+			}
+		}	
+
+		function overrideformsubmission(){
+			var link = document.getElementById("sign-in");
+			link.setAttribute("href","javascript: rememberme();")
+			return false;
+		}
+	</script>
+</head>
+
+<body>
+	<div class="login">
+		<div class="container">
+
+			<header>
+				<div class="logo">
+					<img src="../images/hwr-logo.png">
+				</div>
+			</header>
+
+			<form name="LogonForm" method="post" action="/hwrmobile/login.do" onsubmit="logonSubmit();">
+				<input type="hidden" name="cmd" value="logon">
+				<label>EMAIL ADDRESS</label>
+				<input type="text" name="logonInfo.userId" id="userid">
+
+				<label>PASSWORD</label>
+				<input type="password" name="logonInfo.password" id="password">
+				<a href="javascript: showdialogbox('forgotpassword');" class="forgot" id="forgot-password">Forgot your password?</a>
+				<label class="checkbox">
+					<input type="checkbox" name="logonInfo.rememberMe" value="on" id="rememberme">
+					Remember Me
+				</label>
+				<a href="javascript: logonSubmit();" id="sign-in" class="btn btn-primary"><i class="icon-lock"></i> Login</a> 
+				<p><small>Not a Hardware Rewards member? Become a member at www.hardwarerewards.com or call us at 1-877-931-1023.</small></p>
+				<p><small>©Hardware Rewards 2013</small></p>
+			  </form>
+
+		</div><!-- /.container -->
+	</div><!-- /.login -->
+
+	<!-- Javascript here for faster page load -->
+	<script src="../scripts/jquery-1.11.0.min.js"></script>
+	<script src="../scripts/bootstrap-2.3.2.min.js"></script>
+	<!-- <script src="../scripts/global-scripts.js"></script> -->
+	<script>
+		var result = '';
+		if (result == "error"){
+			showdialogbox("error");
+		}
+		function showdialogbox(windowname) {
+			if (windowname == "forgotpassword") {
+				document.getElementById("msgheader").innerHTML = 'Password Reset';
+				document.getElementById("msgbody").innerHTML = 'To reset your password, you must go to <strong>www.EcoBonus.com</strong>.  From the &quot;Sign In&quot; page, click the &quot;Forgot your password?&quot; link.';
+				$(document).ready(function(){
+					 $("#lightbox, #forgotpasswordbox").fadeIn(300);  
+					 $("a#close-panel").click(function(){  
+					     $("#lightbox, #forgotpasswordbox").fadeOut(300);  
+					 })  
+					})
+				
+			}
+			else{
+			$(document).ready(function(){
+					 $("#lightbox, #errorbox").fadeIn(0);  
+					 $("a#close-panel").click(function(){  
+					     $("#lightbox, #errorbox").fadeOut(0);  
+					 })  
+					})
+			}		
+		}	
+	</script>			
+
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-41197978-1', 'ecobonus.mobi');
+	  ga('send', 'pageview');
+	</script>
+
+</body>
+</html>

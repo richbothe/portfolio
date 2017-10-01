@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hardware Rewards</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-2.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive-2.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="../css/home-global.css">
+    <!-- [if IE 7]><link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome-ie7.min.css"><![endif]-->
+
+	<!-- Javascripts required for page load.  All others at the bottom. -->
+</head>
+
+<body>
+	<div class="login">
+		<div class="container">
+
+			<header>
+				<div class="logo">
+					<img src="../images/hwr-logo.png">
+				</div>
+			</header>
+
+			<form name="LogonForm" method="post" action="/hwrmobile/login.do" onsubmit="logonSubmit();">
+				<input type="hidden" name="cmd" value="logon">
+				<label>EMAIL ADDRESS</label>
+				<input type="text" name="logonInfo.userId" id="userid">
+
+				<label>PASSWORD</label>
+				<input type="password" name="logonInfo.password" id="password">
+				<a href="javascript: showdialogbox('forgotpassword');" class="forgot" id="forgot-password">Forgot your password?</a>
+				<label class="checkbox">
+					<input type="checkbox" name="logonInfo.rememberMe" value="on" id="rememberme">
+					Remember Me
+				</label>
+				<a href="javascript: logonSubmit();" id="sign-in" class="btn btn-primary"><i class="icon-lock"></i> Login</a> 
+				<p><small>Not a Hardware Rewards member? Become a member at www.hardwarerewards.com or call us at 1-877-931-1023.</small></p>
+				<p><small>©Hardware Rewards 2013</small></p>
+			  </form>
+
+		</div><!-- /.container -->
+	</div><!-- /.login -->
+
+	<div id="lightbox"></div>
+	<section class="lightbox-panel" id="errorbox">
+		<div class="error">
+			<h2>Sorry, something went wrong.</h2>
+			<div>
+				<div id="inner-text">
+					<p>Email is required</p>
+					<p>Password is required</p>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="btn btn-primary" onclick="fadeoutmodalwindow();">Please
+			Try Again</a>
+	</section>
+
+	<!-- Javascript here for faster page load -->
+	<script src="../scripts/jquery-1.11.0.min.js"></script>
+	<script src="../scripts/bootstrap-2.3.2.min.js"></script>
+	<script src="../scripts/global-scripts.js"></script>
+
+</body>
+</html>

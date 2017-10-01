@@ -1,0 +1,136 @@
+#lightbox {
+	/*display: none; --> hidden to show static modal.  Unhide for production. - Rich Bothe */
+ 	background:#000;
+ 	opacity:0.5;  
+ 	filter:alpha(opacity=50);  
+ 	position:absolute;  
+   	top:0%;    
+ 	left:0px;  
+  	min-width: 100%;  
+  	height: 100%;
+   	z-index:1000;
+   	margin: 0%; 
+    -webkit-transform: translate3d(0,0,0);
+}    
+
+
+/* Lightbox panel with some content */  
+/* .lightbox-panel {  
+	 display: none;
+	 position: absolute;  
+	 top: 5%;  
+	 left:2%;
+	 right: 2%;  
+	 max-width:100%;
+	 max-height: 80%;  
+	 background:#FFFFFF;  
+	 padding:10px 15px 10px 15px;  
+	 border:2px solid #CCCCCC;  
+	 z-index:1001; 
+	 -webkit-transform: translate3d(0,0,0);
+}*/
+
+.lightbox-panel {  
+    display: block;
+    position: absolute;
+    top: 19%;
+    left: 2%;
+    right: 2%;
+    max-width: 80%;
+    max-height: 80%;
+    background:#FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 58px auto 15px;
+    padding: 10px 10px 20px 10px;
+    width: 87%;
+    z-index: 1001;
+    -webkit-transform: translate3d(0,0,0);
+}
+.lightbox-panel h2 {
+    color: #fff;
+    background-color: #e75204;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: inset 0 0 50px rgba(231,82,4,.7);
+    box-shadow: inset 0 0 50px rgba(231,82,4,.7);
+    font-family: 'UniversCondensedBold', Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+.lightbox-panel p {
+	color: #333;
+    font-size: 100%;
+    margin: 10px 20px;
+}
+/*.lightbox-panel .success h2 {
+    background-color: #009900;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: inset 0 0 50px rgba(0,102,0,.7);
+    box-shadow: inset 0 0 50px rgba(0,102,0,.7);
+    font-family: 'UniversCondensedBold', Helvetica, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+    margin-bottom: 10px;
+}*/
+/*.lightbox-panel .error p {
+    color: #333;
+    font-size: 100%;
+    margin: 0 20px 10px 20px;
+}*/
+/*.lightbox-panel .info h2 {
+    background-color: #2b7dc4;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: inset 0 0 50px rgba(31,109,189,.7);
+    box-shadow: inset 0 0 50px rgba(31,109,189,.7);
+    font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.lightbox-panel .error h2 {
+    background-color: #333;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: inset 0 0 50px rgba(62,61,61,.7);
+    box-shadow: inset 0 0 50px rgba(62,61,61,.7);
+    font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+    margin-bottom: 10px;
+}*/
+/*.lightbox-panel h2 {
+    background-color: #e75204;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: inset 0 0 50px rgba(231,82,4,.7);
+    box-shadow: inset 0 0 50px rgba(231,82,4,.7);
+    font-family: 'UniversCondensedBold', Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}*/
+/*.lightbox-panel .error p {
+    color: #ab1517;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 0 20px 10px 20px;
+}*/
+
+/*  Media Queries  */
+@media (min-width: 768px) {
+	.lightbox-panel { margin: 150px auto 0; }
+}
+@media (max-width: 360px) {
+	.lighbox-panel h2 { font-size: 1.4em; }
+}
+@media (max-width: 320px) {
+    .lightbox-panel .btn-primary,
+    .lightbox-panel .btn-cancel { font-size: 18px; } 
+}
+@media (max-width: 280px) {
+    .lightbox-panel h2 { font-size: 1em; }
+    .lightbox-panel .btn-primary,
+    .lightbox-panel .btn-cancel { font-size: 16px; } 
+}

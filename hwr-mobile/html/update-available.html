@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+	<!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-2.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive-2.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="../css/home-global.css">
+    <link rel="stylesheet" type="text/css" href="../css/eligible-retailers.css">
+    <!-- [if IE 7]><link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome-ie7.min.css"><![endif]-->
+	<script src="scripts/jquery-1.9.0.js"></script>
+
+	<title>Upgrade</title>
+
+	<script>
+		var appStatus = 'forceappupgrade';
+		var source = 'android';
+		function getRequestAttribute() {
+			if (appStatus == "forceappupgrade") {
+				document.getElementById("msgbody").innerHTML = 'A new version of this app is available for download. Update now to enjoy the latest features.';
+				$("#nowbtn").css('display', 'block');
+
+			} else if (appStatus == "remindappupgrade") {
+				document.getElementById("msgbody").innerHTML = 'A new version of this app is available for download. Update now to enjoy the latest features.';
+				$("#nowbtn").css('display', 'block');
+				$("#igonrebtn").css('display', 'block');
+				$("#remindlaterbtn").css('display', 'block');
+
+			}
+		}
+	</script>
+</head>
+
+<body onload="getRequestAttribute();">
+	<div class="loading">
+		<div class="container">
+			<div class="logo">
+				<img src="../images/hwr-logo.png"
+					alt="Hardware Rewards Logo" />
+			</div>
+			<section></section>
+		</div>
+	</div>
+	<div id="lightbox"></div>
+	<section class="lightbox-panel">
+		<div class="info">
+			<h2>Update Available</h2>
+			<p id="msgbody"></p>
+		</div>
+		<a href="#" class="btn btn-primary" onClick='gotoAppStore()'>
+			<i class="icon-download icon-small"></i> Update Now
+		</a>
+		<a href="#" class="btn btn-cancel" onClick='onIgnoreClick();'>
+			<i class="icon-remove"></i> Update Later
+		</a>
+		<input type="hidden" id="ignoreflag" name="ignoreflag" value="n" />
+	</section>
+
+	<script>
+		function gotoAppStore() {
+			if (source == "android") {
+				window.location.href = "https://play.google.com/store/apps/details?id=com.ecobonus.imageprocessor"; //google play store
+			} else if (source == "ios") {
+				window.location.href = "https://itunes.apple.com/us/app/ecobonus/id632329923?mt=8"; //apple app store
+			}
+		}
+
+		function onIgnoreClick() {
+			$('#ignoreflag').val('y');
+			if (source == "android") {
+				AndroidFunction.setAppUpdateIgnoreFlag();
+			}
+			window.location.href = "login.do?cmd=loginpage"
+		}
+	</script>
+
+	<script src="scripts/jquery.mobile.min.js"></script>
+	<script src="scripts/global-scripts.js"></script>
+	<script src="/ecobonus/scripts/EcoBonus_sign_in_landing_general.js"
+		type="text/javascript"></script>
+	<!-- Google Analytics -->
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-12305317-4', 'crscan.com');
+		ga('send', 'pageview');
+	</script>
+
+	<script src="scripts/jquery.mobile.custom.min.js"></script>
+	<script src="scripts/global-scripts.js"></script>
+
+</body>
+
+</html>
