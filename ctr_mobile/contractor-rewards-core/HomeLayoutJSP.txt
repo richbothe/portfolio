@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<%@ include file="../includes/imports.inc"%>
+<cms:content var="menulist" code="globalnav.menu" />
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-2.3.2.min.css">
+<link rel="stylesheet" type="text/css"href="css/bootstrap-responsive-2.3.2.min.css">
+<link rel="stylesheet" type="text/css"
+	href="css/ContractorRewards_home_global.css">
+<link rel="stylesheet" type="text/css"
+	href="css/ContractorRewards_lightbox_global_new.css">
+<link rel="stylesheet" type="text/css"
+	href="fonts/font-awesome/css/font-awesome.min.css">
+<script src="scripts/jquery-1.9.0.js"></script>
+<script type="application/javascript" src="scripts/iscroll.js"></script>
+<script type="text/javascript">
+        
+    	
+    var myScroll;
+    function loaded() {
+                setTimeout(function() {
+                    myScroll = new iScroll('scroller', {hScroll: false});
+                }, 100);
+            }
+            window.addEventListener('load', loaded, false);
+        </script>
+        
+<script>
+function showdialogbox(message) {
+	 if (message == 'receiptUploadSuccess')
+	{
+			document.getElementById("msgheader").innerHTML = 	'<bean:message key="receipt.confirmation.successheader" />';
+			$("#msgbody").css("color","green");
+			document.getElementById("msgbody").innerHTML = 	'<bean:message key="receipt.confirmation.successbody" />';
+			$("body").css('background-color','#D3D3D3');
+			 $("#lightbox").fadeIn(0);	 
+			 $("#modal-window").fadeIn(0);
+			 $('#page').css('opacity','0.2');
+			 $('#nav').toggleClass('active-flyout');
+			
+	}
+	else if (message == 'receiptUploadFailure')
+	{
+ 		document.getElementById("msgheader").innerHTML = 	'<bean:message key="receipt.confirmation.failureheader" />';
+ 		document.getElementById("msgbody").innerHTML = 	'<bean:message key="receipt.confirmation.failurebody" />';
+ 		$("body").css('background-color','#D3D3D3');
+ 		 $("#lightbox").fadeIn(0);	 
+ 		 $("#modal-window").fadeIn(0);
+ 		 $('#page').css('opacity','0.2');
+ 		$('#nav').toggleClass('active-flyout');
+	}
+	
+}		
+
+function closelightbox(){
+	$("#lightbox").fadeOut(0);	 
+ 		 $("#modal-window").fadeOut(0);
+ 		 $('#page').css('opacity','1');
+ 		$('#nav').removeClass('active-flyout');
+ 		$("body").css('background-color','#FFFFFF');
+	//	 window.location.href="home.do";
+}
+
+$(document).ready(function(){
+	//move page back when clicking on a nav item
+	
+	var msg = '<c:out value= "${msg}"/>';
+	showdialogbox(msg);
+	
+	$("nav li a").click(function(){
+		$('#nav').removeClass('active-flyout');
+		$('#scrollablecontent').animate({left: '0%'}, 400, function(){
+    		$('nav.main-menu').css('visibility','hidden');
+    		$('header.page-header').css('position','fixed');
+    	});
+	});
+	
+	$("label.nav-tap").click(function(){
+	    $('#nav').toggleClass('active-flyout');
+	    
+	    if($('#nav').hasClass('active-flyout')){
+	    	$('header.page-header').css('position','absolute');
+	    	$('#scrollablecontent').animate({left: '66.2%'}, 400);
+	    	$('nav.main-menu').css('visibility','visible');
+	    //	myScroll.disable();
+	    }else{
+	    	
+	    	$('#scrollablecontent').animate({left: '0%'}, 400, function(){
+	    		$('nav.main-menu').css('visibility','hidden');
+	    		$('header.page-header').css('position','fixed');
+	    	});
+	    //	 myScroll.enable();
+	    }
+	   
+	});
+	
+	
+	$("#page").on('swipeleft', function(){
+		$('#nav').removeClass('active-flyout');
+		$('header.page-header').css('position','fixed');
+		$('#scrollablecontent').animate({left: '0%'}, 400, function(){
+    		$('#page nav.main-menu').css('visibility','hidden');
+    	});
+	    
+	});
+});
+
+</script>
+
+<style>
+  #lightbox {  
+	display:none;  
+ 	background:transparent;
+ 	position: absolute;
+ 	opacity:0.7;  
+ 	filter:alpha(opacity=70);   
+ 	position:fixed;  
+   	min-width: 100%;  
+  	height: 100%;
+   	z-index:8888;
+   	margin: 0%;  
+   	overflow: none;
+}    
+
+
+/* Lightbox panel with some content */  
+.lightbox-panel {  
+ display:none;  
+ position: absolute;
+ top: 5%;  
+ left:2%;
+ right: 2%;  
+ max-width:100%;
+ max-height: 80%;  
+ background:#FFFFFF;  
+ padding:10px 15px 10px 15px;  
+ border:2px solid #CCCCCC;  
+ z-index:9999;
+ font-size: 125%;
+}  
+
+</style>
+
+
+<tiles:importAttribute />
+<tiles:useAttribute name="button" classname="java.lang.String" />
+
+<head>
+<logic:iterate id="item" name="cssfiles" type="java.lang.Object">
+	<link
+		href="<%=request.getContextPath()%>/css/<bean:write name="item" property="value"/>"
+		rel="stylesheet" type="text/css" />
+</logic:iterate>
+
+
+<title><tiles:getAsString name="pagetitle" ignore="true" /></title>
+
+</head>
+
+<body>
+	<div id="nav"></div>
+	<section id="page">
+	 <div id="scrollablecontent" style="width:100%;position:absolute">
+		<header class="page-header">
+			<label class="nav-tap"> <i class="icon-reorder"></i> </label>
+			<h1>
+				<img src="images/cr-logo.png" alt="Contractor Rewards"
+					class="trigger" />
+			</h1>
+
+			<a href="notification.do" id="notificationCount"> <i
+				class="icon-comment"></i> </a>
+		</header>
+
+		<label id="contentsideoverlay"></label>
+
+		<!-- Area for page content -->
+		<article id="content-wrapper">
+			<div id="scroller" class="content">
+				<tiles:insert attribute="contentpage" ignore="true" flush="true" />
+			</div>
+		</article>
+	</div>
+
+<nav class="main-menu">
+           <header class="menu-header">
+           <c:set var="paxid" value='${logonInfo.firstName}'></c:set>
+            <span class="full-name"><bean:message key="home.messages.welcometext" /> <c:out value='${paxid}'/></span>
+            <span class="points-earned" style="float: left;padding-top: .1%; margin-top: 25px;">
+             <%if(session.getAttribute( "isBalanceInteger" ) == "false") {%><bean-el:message key="home.messages.pointsnotavailable" />
+			<%} else {%> 			
+			<bean-el:message key="home.messages.points" arg0="${logonInfo.availablebalance}"/></span>
+			<%} %>
+			
+			
+           </header>
+            <ul id="menulist">
+            <c:forEach items="${menulist}" var="menus">
+            <c:if test="${ menus.contentDataMap['status'] == 'A'}">
+            	<li id=<c:out escapeXml="false" value="${menus.contentDataMap['id']}"></c:out> >
+            		<a onClick=loadCentreContent("<c:out escapeXml="false" value="${menus.contentDataMap['url']}"></c:out>")>
+            			<i class="<c:out escapeXml="false" value="${menus.contentDataMap['icon']}"></c:out> icon-fixed-width"></i>
+            			<c:out escapeXml="false" value="${menus.contentDataMap['title']}"></c:out>
+            		</a>
+            	</li>
+            </c:if>
+            
+            </c:forEach>
+			<li><span class="copyright">&copy; 2013 BIWORLDWIDE, Inc. All Rights Reserved.</span></li>	
+            </ul>
+	</nav>
+	</section>
+ 	<tiles:insert attribute="footer" ignore="true" flush="true" /> 
+
+ <div id="lightbox"></div>
+	<section class="lightbox-panel" id="modal-window">
+	    <img src="images/x-button.png" alt="Close Button" onclick="closelightbox();"/><br> 
+	    	<h2 id="msgheader"></h2>
+	    	<div style="margin: 2.5% 0;" >
+	    		<div class="inner-text">
+	    			<span>></span>
+	    			<p id="msgbody"></p>
+	    		</div>
+	    	</div>
+ 				<a class ="blue-btn" id="close-panel" onclick="closelightbox();" href="#"><bean:message key="receipt.confirmation.buttontext" /></a>
+	</section>
+	
+<!-- Google Analytics -->	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41197978-1', 'ecobonus.mobi');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

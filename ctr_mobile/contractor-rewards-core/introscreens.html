@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="height=device-height, width=device-width, minimum-scale=1.0, user-scalable=no" /> -->
+    <title>Welcome</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-2.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive-2.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ContractorRewards_home_global.css">
+</head>
+
+<body>
+    <header class="welcome-header blue-bar">
+        <h3>Welcome</h3>
+        <button class="blue-btn" data-role="none">Done</button>
+    </header>
+    <div class="wrapper">
+        <!-- <div class="container"> -->
+        <div class="contractor-rewards-header">
+            <section class="intro-slide-wrapper">
+                <div class="slide-nav">
+                    <ul>
+                        <li class="active-nav"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <ul class="intro-slider">
+                    <li class="slide slide-1 active-slide">
+                        <div class="contractor-rewards-logo">
+                            <img src="images/contractor-rewards-logo.png" alt="Contractor Rewards Logo"/>
+                        </div>
+                        <p>Welcome to Contractor Rewards, the loyalty program that rewards builders, remodelers, and professional trade contractors for buying quality products from leading building products manufacturers.</p>
+                        <small>Swipe left to learn how the app works.</small>
+                    </li>
+                    <li class="slide slide-2 ">
+                        <div class="step">
+                            <img class="number" src="images/one_img.png">
+                            <h1>Select a retailer</h1>
+                            <p>Tap a name to view the list of brands accepted on receipts from the retailer.</p>
+                        </div>
+                        <img src="images/cr-step1.png" alt="Eligible Retailer List" class="step1image">
+                    </li>
+                    <li class="slide slide-3">
+                        <div class="step">
+                            <img class="number" src="images/two_img.png">
+                            <h1>Open the camera</h1>
+                            <p>Tap the camera icon to start the receipt upload process.</p>
+                        </div>
+                        <img src="images/cr-step2.png" alt="Eligible Retailer List Open" class="step2image">
+                    </li>
+                    <li class="slide slide-4">
+                        <div class="step">
+                            <img class="number" src="images/three_img.png">
+                            <h1>Take a photo</h1>
+                            <p>Align the receipt with the edges of the guide and press the photo button.</p>
+                        </div>
+                        <img src="images/cr-step3.png" alt="Camera View - Align Logo to top, Align receipt left to right" class="step3image">
+                    </li>
+                    <li class="slide slide-5">
+                        <div class="step">
+                            <img class="number" src="images/four_img.png">
+                            <h1>If receipt is too long...</h1>
+                            <p>...simply click “Add Section” and take another photo.</p>
+                        </div>
+                        <img src="images/cr-step4.png" alt="Camera View - Add Section" class="step4image">
+                    </li>
+                    <li class="slide slide-6">
+                        <h1>Congratulations!</h1>
+                        <p>You have completed your training. Now you’re ready to start saving.</p>
+                        <button>Get Started <icon class="icon-arrow-right"></i></button>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <!-- </div class="container"> -->
+    </div>
+
+    <!-- Javascript here for faster page load -->
+    <script src="js/jquery-1.9.0.js"></script>
+    <script src="js/bootstrap-2.3.2.min.js"></script>
+    <script src="js/global-scripts.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+
+    <script>
+        $(document).on("mobileinit", function(){
+            $.mobile.ajaxEnabled=false;
+            $.mobile.loadingMessage = false;
+        });            
+    </script>    
+
+</body>
+</html>
