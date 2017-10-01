@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Invoice Processing Hub</title>
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-3.2.0.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/dataTables.bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome-4.1.0.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+	<!-- HTML5 Shim IE8 support of HTML5 elements -->
+    <!--[if lt IE 9]><script src="../js/html5shiv.min.js"></script><![endif]-->
+
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+			<div class="logo"></div>
+			<div class="profile">
+				<span>Welcome, First Name</span>
+				<a href="javascript();" title="Logout">Logout</a>
+			</div>
+		</div>
+	</header>
+
+	<nav class="container">
+		<ul class="nav nav-tabs" role="tablist">
+			<li>
+				<a href="distributor-analytics.html">Distributor Analytics</a>
+			</li>
+			<li class="active"><a href="processing.html">Processing</a></li>
+		</ul>
+	</nav>
+
+	<section class="container">
+		<div class="row margin-bottom-20">
+			<div class="col-xs-6">
+				<span class="pull-left">
+					<a href="processing.html" title="View all invoices">All Invoices</a>
+				</span>
+			</div>
+			<div class="col-xs-6">
+				<span class="pull-right">
+					<a href="javascript();" title="View original invoice" data-toggle="modal" data-target="#viewInvoice" data-local="#myCarousel">View Original Invoice</a>
+				</span>
+			</div>
+		</div>
+
+		<div class="row margin-bottom-10">
+			<div class="col-xs-2">
+				<span class="data-label">Invoice ID</span>
+			</div>
+			<div class="col-xs-4 text-left">
+				<span class="data-info">172229</span>
+			</div>
+			<div class="col-xs-4 text-right">
+				<span class="data-label">Invoice Date</strong></span>
+			</div>
+			<div class="col-xs-2 text-right">
+				<span class="data-info">MM/DD/YY</span>
+			</div>
+		</div>
+		<div class="row margin-bottom-10">
+			<div class="col-xs-2">
+				<span class="data-label">Distributor</strong></span>
+			</div>
+			<div class="col-xs-4 text-left">
+				<span class="data-info">Reinhart Foodservice, LLC</span>
+			</div>
+			<div class="col-xs-4 text-right">
+				<span class="data-label">Current Status</strong></span>
+			</div>
+			<div class="col-xs-2 text-right">
+				<select>
+					<option selected>Uploaded</option>
+					<option>Added to GCS</option>
+					<option>Added to IP</option>
+					<option>Added to Kofax</option>
+				</select>
+			</div>
+		</div>
+
+		<table id="processing-details" class="display table table-striped order-column" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th style="width: 300px;">Status</th>
+					<th style="width: 150px;">Timestamp</th>
+					<th style="width: 490px;">&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Uploaded</td>
+					<td>5/21/14 - 07:14:24</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>Posted to Kofax</td>
+					<td>5/21/14 - 07:01:12</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>Uploaded</td>
+					<td>5/20/14 - 07:14:24</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>Uploaded</td>
+					<td>5/21/14 - 07:14:24</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>Uploaded</td>
+					<td>5/21/14 - 07:14:24</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>Uploaded</td>
+					<td>5/21/14 - 07:14:24</td>
+					<td>&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="hr"></div>
+		<div class="pull-right">
+			<button class="btn btn-default"><span>Cancel</span></button>
+			<button class="btn btn-default"><span>Save</span></button>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="logo-small"></div>
+			<ul>
+				<li><a href="help.html">Help</a></li>
+				<li><a href="privacy-policy.html">Privacy Policy</a></li>
+				<li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+				<li><a href="sitemap.html">Site Map</a></li>
+				<li><A href="contact-us.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- View Invoice - Modal Carousel -->
+    <div class="invoice-modal" >
+        <div id="viewInvoice" class="modal fade modal-fullscreen force-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <div class="rotate">
+                    <a id="rotate" class="rotate-left" title="Rotate left"><i class="fa fa-rotate-left fa-lg"></i></a>
+                    <a id="rotate" class="rotate-right" title="Rotate right"><i class="fa fa-rotate-right fa-lg"></i></a>
+                </div>
+                <h3 id="myModalLabel">Invoice: 122034425</h3>
+            </div>
+            <div class="modal-body">
+                <div id="myCarousel" class="carousel slide carousel-fit">
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                      <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                      <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+                      <li data-target="#myCarousel" data-slide-to="4" class=""></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img id="image" src="../images/invoices/sample-1.png">
+                        </div>
+                        <div class="item">
+                            <img id="image" src="../images/invoices/sample-2.png">
+                        </div>
+                        <div class="item">
+                            <img id="image" src="../images/invoices/sample-3.JPEG">
+                        </div>
+                        <div class="item">
+                            <img id="image" src="../images/invoices/sample-4.gif">
+                        </div>
+                        <div class="item">
+                            <img id="image" src="../images/invoices/sample-5.gif">
+                        </div>
+                    </div>
+
+                    <a href="#myCarousel" data-slide="prev" class="carousel-control left"><i class="fa fa-chevron-circle-left fa-2x"></i></a>
+                    <a href="#myCarousel" data-slide="next" class="carousel-control right"><i class="fa fa-chevron-circle-right fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true"><span>Close</span></button>
+            </div>
+        </div>
+    </div>
+
+	<!-- Javascripts at the bottom for faster page loading. -->
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-3.2.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.dataTables-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../js/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="../js/dataTables.fixedColumns.js"></script>
+	<Script type="text/javascript" src="../js/jquery-rotate.min.js"></script>
+
+	<script>
+
+		// Initialize dataTable
+		$(document).ready(function() {
+			var table = $('#processing-details').removeAttr('width').dataTable( {
+				"lengthChange": false,
+				"ordering": true,
+				"searching": false,
+				"info": false,
+				"paginate": false,
+				"bAutoWidth": false,
+				"columnDefs": [
+					{ "orderable": false, "targets": 0 },
+					{ "orderable": false, "targets": 2 }
+				]
+			});
+			new $.fn.dataTable.FixedColumns( table );
+		});
+
+		// Initialize view invoice carousel
+        $(function() {
+            $('.carousel').each(function(){
+                $(this).carousel({
+                    interval: false
+                });
+            });
+        });
+
+        /*  Rotate invoice image  */
+        newangle = 0;
+
+        $('a#rotate').click(function() {
+            if ($(this).attr('class') == "minus")
+                operation = "-";
+            else
+                operation = "+";
+            
+            //alert(operation)
+            var angle = next(operation);
+            $("div.active img#image").rotate(angle);
+        });
+
+        function next(oper) {
+           if (oper == "+")
+              newangle += 90;
+            else
+              newangle -= 90;
+            
+           if (newangle >= 360) newangle = 0;
+            
+            return newangle;
+        }
+
+	</script>
+
+</body>
+
+</html>
